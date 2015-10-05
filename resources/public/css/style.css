@@ -184,7 +184,7 @@ section {
     height: 200px;
     position: relative;
     background-color: #fff;
-    background: linear-gradient(to right, rgba(248,246,246,0) 50%,rgba(248,246,246,1) 95%);
+    background: linear-gradient(to right, rgba(248,246,246,0) 50%,rgba(248,246,246,1) 98%);
 }
 
 section h2 {
@@ -229,15 +229,13 @@ section h2 {
     clear: both;
 }
 
-.body {
-    /* font-family: 'Carrois Gothic SC', sans-serif; */
-    /* text-transform: lowercase; */
-    margin-top: 20px;
+dt {
+    font-weight: bold;
 }
 
-li {
-    /* font-family: 'Carrois Gothic SC', sans-serif; */
+dd {
     text-transform: lowercase;
+    margin: 0 0 1em 0;
 }
 
 table {

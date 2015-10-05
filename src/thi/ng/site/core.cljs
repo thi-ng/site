@@ -81,13 +81,13 @@
               :desc    "Comprehensive computational 2d / 3d geometry & visualization library"
               :modules [{:id   "geom-core"
                          :uri  "https://github.com/thi-ng/geom/blob/master/geom-core/src/index.org"
-                         :desc "core module"}
+                         :desc "protocols, vector algebra, intersections"}
                         {:id   "geom-meshops"
                          :uri  "https://github.com/thi-ng/geom/blob/master/geom-meshops/src/index.org"
                          :desc "mesh operations, I/O, subdivisions"}
                         {:id   "geom-physics"
                          :uri  "https://github.com/thi-ng/geom/blob/master/geom-physics/src/index.org"
-                         :desc "verlet physics engine"}
+                         :desc "verlet physics engine, behaviors"}
                         {:id   "geom-svg"
                          :uri  "https://github.com/thi-ng/geom/blob/master/geom-svg/src/index.org"
                          :desc "SVG export & 3d rendering w/ software shaders"}
@@ -115,10 +115,10 @@
               :desc    "Signal/Collect inspired Compute graph infrastructure, fact graph, query engine & linked data server"
               :modules [{:id   "fabric-core"
                          :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-core/README.org"
-                         :desc "compute graph core module"}
+                         :desc "protocols, compute graph core types"}
                         {:id   "fabric-facts"
                          :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-facts/README.org"
-                         :desc "fact graph, query engine, query visualization, fact parsers"}
+                         :desc "fact graph, query engine, query DSL, query visualization, fact parsers"}
                         {:id   "fabric-ld"
                          :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-ld/README.org"
                          :desc "linked data server & query enpoint"}]}
@@ -278,10 +278,11 @@
    :glsl   "GLSL"
    :emacs  "Emacs & Org-mode"})
 
+(def counts
+  ["zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten"])
+
 #_(def clients
   ["Barbican" "Google" "Open Data Institute" "Unicredit" "Nike" "Leeds College of Music" "Resonate Festival" "SAC Städelschule Frankfurt" "FNB" "Victoria & Albert Museum" "Moving Brands"])
-
-#_(enable-console-print!)
 
 (defn on-js-reload []
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
@@ -289,12 +290,12 @@
 
 (defn project-modules
   [name modules]
-  [:div "This project contains several sub-modules:"
-   [:ul
-    (map-indexed
-     (fn [i {:keys [id uri desc]}]
-       [:li {:key (str name id)}
-        [:a {:href uri} id] " - " desc])
+  [:div "This project contains " (counts (count modules)) " sub-modules:"
+   [:dl
+    (mapcat
+     (fn [{:keys [id uri desc]}]
+       [[:dt {:key (str name id)} [:a {:href uri} id]]
+        [:dd desc]])
      modules)]])
 
 (defn project-section
@@ -352,55 +353,25 @@
           {:on-click (fn [e] (.preventDefault e) (dispatch [:dd-open id]))}
           (get opts (:sel @dd))])])))
 
-#_(defn header
-  []
-  [:header
-   [:img#logo {:src "/img/logo-anim-white.min.svg" :alt "thi.ng logo"}]])
+(comment
+  (defn client-list
+    []
+    [:div#clients
+     "Used in projects for: "
+     [:span.list
+      (->> clients
+           (sort)
+           (str/join " | "))]])
 
-#_(defn intro
-  []
-  [:div#intro
-   [:div.row
-    [:p [:strong "An open source collection of 20+ computational design tools for Clojure & Clojurescript"]]]
-   [:div#news
-    "Sign up for intensive 3-day " [:a {:href "http://workshop.thi.ng"} [:span "workshops in London!"] [:span.link-alt "Yes, let's do it!"]]]
-   [:div.row
-    [:div.col2
-     [:p "In active development since 2012, and totalling over 32,000 lines of code, the libraries address concepts related to many design displines, from " [:strong "animation, generative design, digital fabrication, data analysis / validation / visualization, 2d / 3d geometry, meshing, voxel modeling & rendering, linked data graphs & querying, encryption etc."]]]
-    [:div.col2
-     [:p "Many of the thi.ng projects (especially the larger ones) are written in a "
-      [:a {:href "https://en.wikipedia.org/wiki/Literate_programming"} "literate programming style"]
-      " and include extensive documentation, diagrams and tests. All projects are licensed under the "
-      [:a {:href "http://www.apache.org/licenses/LICENSE-2.0"} "Apache Software License 2.0"] "."]]
-    [:div.row
-     [:div.col2
-      [:p "A project by " [:a {:href "https://twitter.com/toxi"} "Karsten Schmidt"] ", who is currently available for work."]]]]
-   [:div.space "\u00a0"]])
-
-#_(defn client-list
-  []
-  [:div#clients
-   "Used in projects for: "
-   [:span.list
-    (->> clients
-         (sort)
-         (str/join " | "))]])
-
-#_(defn heatmap
-  []
-  [:div#heatmap
-   [:h1 "activity"]
-   [:div [:img {:src "/img/all-commits.svg"}]]])
-
-#_(defn footer
-  []
-  [:footer
-   [:a {:href "https://github.com/thi-ng/"} [:i.fa.fa-github] " thi-ng"]
-   " | "
-   [:a {:href "https://twitter.com/thing_clj"} [:i.fa.fa-twitter] " @thing_clj"]
-   " | "
-   [:a {:href "https://twitter.com/toxi"} [:i.fa.fa-twitter] " @toxi"]
-   " | © 2015 Karsten Schmidt"])
+  (defn footer
+    []
+    [:footer
+     [:a {:href "https://github.com/thi-ng/"} [:i.fa.fa-github] " thi-ng"]
+     " | "
+     [:a {:href "https://twitter.com/thing_clj"} [:i.fa.fa-twitter] " @thing_clj"]
+     " | "
+     [:a {:href "https://twitter.com/toxi"} [:i.fa.fa-twitter] " @toxi"]
+     " | © 2015 Karsten Schmidt"]))
 
 (defn main-panel
   []
