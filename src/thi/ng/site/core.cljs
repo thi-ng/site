@@ -295,7 +295,7 @@
     (mapcat
      (fn [{:keys [id uri desc]}]
        [[:dt {:key (str name id)} [:a {:href uri} id]]
-        [:dd desc]])
+        [:dd {:key (str name id "desc")} desc]])
      modules)]])
 
 (defn project-section
