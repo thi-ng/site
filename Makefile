@@ -8,11 +8,11 @@ MAIN_SRC = $(SRC)/main
 
 HTML_OPTS = --remove-surrounding-spaces max
 
-mainhtml: $(MAIN)/index.html
-mainjs: $(MAIN)/js/main/app.js
-maincss: $(MAIN)/css/style.css
-mainfonts: $(MAIN)/fonts
-mainimg: $(MAIN)/img
+main-html: $(MAIN)/index.html
+main-js: $(MAIN)/js/main/app.js
+main-css: $(MAIN)/css/style.css
+main-fonts: $(MAIN)/fonts
+main-img: $(MAIN)/img
 
 $(MAIN)/index.html: $(RES)/index.html
 	@echo "compressing html..."
@@ -35,11 +35,14 @@ $(MAIN)/img: $(RES)/img $(RES)/favicon.ico
 	@cp $(RES)/favicon.ico $(MAIN)/
 
 $(MAIN)/js/main/app.js: $(MAIN_SRC)
+	@echo "compiling js..."
 	@lein with-profile prod do clean, cljsbuild once min
 	@mkdir -p $(MAIN)/js/main
 	@cp $(RES)/js/main/app.js $(MAIN)/js/main/
 
-main: mainhtml mainjs maincss mainfonts mainimg
+main: main-html main-js main-css main-fonts main-img
+
+install-main: main
 	@echo "syncing with: $(MAIN_TARGET)"
 	@s3cmd -P sync $(MAIN)/ $(MAIN_TARGET)
 
@@ -51,4 +54,4 @@ serve-main:
 	@sleep 1 && open "http://localhost:8000/" &
 	@cd $(MAIN) && python3 -m http.server
 
-phony: clean serve-main
+.PHONY: clean serve-main

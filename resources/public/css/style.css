@@ -48,13 +48,19 @@ a.social:link, a.social:hover, a.social:visited {
                                }
 
 header {
-    background-color: rgba(20,16,16,0.95);
     position: fixed;
-    width: 104px;
-    top: 0;
     z-index: 10;
+    top: 0;
+    width: 100%;
+}
+
+#logo {
     padding: 10px 20px;
-    left: 20px;
+    background-color: rgba(20,16,16,0.95);
+    width: 104px;
+}
+
+#logo img {
     height: 60px;
 }
 
@@ -74,10 +80,6 @@ footer a:link, footer a:hover, footer a:visited {
                                    color: #f8f6f6 !important;
                                    text-decoration: none !important;
                                }
-
-img#logo {
-    height: 60px;
-}
 
 #heatmap img {
     width: 100%;
@@ -343,6 +345,9 @@ span.tag:hover {
     #news {
         font-size: 172%;
     }
+    #clients .list {
+        font-size: 200%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -363,6 +368,9 @@ span.tag:hover {
         padding: 0 20px;
         height: 60px;
         line-height: 65px;
+    }
+    #clients .list {
+        font-size: 150%;
     }
 }
 
@@ -385,9 +393,6 @@ span.tag:hover {
         height: 60px;
         line-height: 70px;
     }
-    #clients .list {
-        font-size: 150%;
-    }
     footer {
         font-size: 10px;
     }
@@ -404,6 +409,19 @@ span.tag:hover {
         width: 45%;
         float: left;
         margin-right: 5%;
+    }
+}
+
+@media (max-width: 1340px) {
+    header .limit {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1341px) {
+    .limit {
+        max-width: 1280px;
+        margin: auto;
     }
 }
 
