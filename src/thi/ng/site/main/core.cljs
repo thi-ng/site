@@ -1,9 +1,9 @@
-(ns ^:figwheel-always thi.ng.site.core
+(ns ^:figwheel-always thi.ng.site.main.core
   (:require-macros
    [reagent.ratom :refer [reaction]]
    [cljs-log.core :refer [debug info warn]])
   (:require
-   [thi.ng.site.handlers :as handlers]
+   [thi.ng.site.main.handlers :as handlers]
    [clojure.string :as str]
    [cljsjs.react :as react]
    [reagent.core :as reagent :refer [atom]]

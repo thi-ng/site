@@ -19,22 +19,38 @@
 
   :source-paths  ["src"]
 
-  :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
+  :clean-targets ^{:protect false} ["resources/public/js/main"
+                                    "resources/public/js/workshop"
+                                    "target"]
 
   :profiles      {:prod {:env {:log-level 4}}}
 
   :cljsbuild     {:builds [{:id           "dev"
                             :source-paths ["src"]
-                            :figwheel     {:on-jsload "thi.ng.site.core/on-js-reload" }
-                            :compiler     {:main                 thi.ng.site.core
-                                           :asset-path           "js/compiled/out"
-                                           :output-to            "resources/public/js/compiled/app.js"
-                                           :output-dir           "resources/public/js/compiled/out"
+                            :figwheel     {:on-jsload "thi.ng.site.main.core/on-js-reload" }
+                            :compiler     {:main                 thi.ng.site.main.core
+                                           :asset-path           "js/main/out"
+                                           :output-to            "resources/public/js/main/app.js"
+                                           :output-dir           "resources/public/js/main/out"
                                            :source-map-timestamp true}}
                            {:id           "min"
                             :source-paths ["src"]
-                            :compiler     {:output-to     "resources/public/js/compiled/app.js"
-                                           :main          thi.ng.site.core
+                            :compiler     {:output-to     "resources/public/js/main/app.js"
+                                           :main          thi.ng.site.main.core
+                                           :optimizations :advanced
+                                           :pretty-print  false}}
+                           {:id           "dev-workshop"
+                            :source-paths ["src"]
+                            :figwheel     {:on-jsload "thi.ng.site.workshop.core/on-js-reload" }
+                            :compiler     {:main                 thi.ng.site.workshop.core
+                                           :asset-path           "js/compiled/out"
+                                           :output-to            "resources/public/js/workshop/app.js"
+                                           :output-dir           "resources/public/js/workshop/out"
+                                           :source-map-timestamp true}}
+                           {:id           "min-workshop"
+                            :source-paths ["src"]
+                            :compiler     {:output-to     "resources/public/js/workshop/app.js"
+                                           :main          thi.ng.site.workshop.core
                                            :optimizations :advanced
                                            :pretty-print  false}}]}
 

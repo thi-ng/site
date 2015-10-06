@@ -1,4 +1,4 @@
-(ns thi.ng.site.handlers
+(ns thi.ng.site.main.handlers
   (:require-macros
    [reagent.ratom :refer [reaction]]
    [cljs-log.core :refer [debug info warn]])
