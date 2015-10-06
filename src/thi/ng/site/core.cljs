@@ -18,7 +18,7 @@
               :loc     98
               :tags    ["template" "literate programming"]
               :bg-uri  "/img/projects/babel/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 65%"
               :desc    "Project template for polyglot, literate programming with Emacs & Org-mode"}
    :color    {:name    "thi.ng/color"
               :version "1.0.0"
@@ -37,7 +37,7 @@
               :loc     178
               :tags    ["encryption" "interop"]
               :bg-uri  "/img/projects/crypto/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 70%"
               :desc    "GPG keypair generation, encryption & decryption facilities"}
    :domus    {:name    "thi.ng/domus"
               :version "0.2.0"
@@ -57,7 +57,7 @@
               :loc     473
               :tags    ["graph" "collections" "binary"]
               :bg-uri  "/img/projects/dstruct/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 35%"
               :desc    "Data structures & utilities: Disjoint sets, Interval Trees, collection helpers, binary data I/O"}
    :fourier  {:name    "thi.ng/fourier"
               :version "0.1.0"
@@ -67,7 +67,7 @@
               :loc     392
               :tags    ["audio" "analysis" "dataviz"]
               :bg-uri  "/img/projects/fourier/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 60%"
               :desc    "Audio frequency analysis & visualization"}
    :geom     {:name    "thi.ng/geom"
               :version "0.0.881"
@@ -111,7 +111,7 @@
               :loc     4796
               :tags    ["dsl" "declarative" "async" "graph" "linked data" "query" "parser" "server" "dataviz"]
               :bg-uri  "/img/projects/fabric/hero.jpg"
-              :bg-pos  "50% 0%"
+              :bg-pos  "50% 15%"
               :desc    "Signal/Collect inspired Compute graph infrastructure, fact graph, query engine & linked data server"
               :modules [{:id   "fabric-core"
                          :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-core/README.org"
@@ -150,7 +150,7 @@
               :loc     895
               :tags    ["dsl" "generative" "fabrication" "3d" "mesh"]
               :bg-uri  "/img/projects/morphogen/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 40%"
               :desc    "3d form evolution through tree-based transformations"}
    :ndarray  {:name    "thi.ng/ndarray"
               :version "0.3.0"
@@ -207,7 +207,7 @@
               :loc     507
               :tags    ["interop" "binary" "parser" "conversion" "opencl"]
               :bg-uri  "/img/projects/structgen/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 60%"
               :desc    "Interop library for working with native C structs and binary formats"}
    :trio     {:name    "thi.ng/trio"
               :version "0.1.0"
@@ -217,7 +217,7 @@
               :loc     3066
               :tags    ["dsl" "graph" "linked data" "parser" "query" "declarative"]
               :bg-uri  "/img/projects/trio/hero.jpg"
-              :bg-pos  "50% 33%"
+              :bg-pos  "50% 40%"
               :desc    "Simple, extensible triplestore API and powerful SPARQL-inspired query engine"}
    :tarrays  {:name    "thi.ng/typedarrays"
               :version "0.1.2"
@@ -227,7 +227,7 @@
               :loc     133
               :tags    ["interop" "binary" "webgl"]
               :bg-uri  "/img/projects/typedarrays/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 40%"
               :desc    "Clojurescript wrapper & convenience functions for JavaScript typed arrays"}
    :tweeny   {:name    "thi.ng/tweeny"
               :version "0.1.0-SNAPSHOT"
@@ -254,7 +254,7 @@
               :loc     17
               :tags    ["error handling"]
               :bg-uri  "/img/projects/xerror/hero.jpg"
-              :bg-pos  "50% 50%"
+              :bg-pos  "50% 60%"
               :desc    "Error throwing functions for Clojure & Clojurescript"}})
 
 (def project-sort-criteria

@@ -84,9 +84,7 @@ img#logo {
 }
 
 #wrapper {
-    /* margin-top: 100px; */
     padding: 0 20px;
-    border-top: 100px solid #bff;
 }
 
 #intro, #clients {
@@ -97,6 +95,7 @@ img#logo {
 
 #intro {
     background: #bff;
+    padding-top: 100px;
 }
 
 #clients {
@@ -177,6 +176,15 @@ section {
     background-size: cover;
     margin: 0 -20px;
     overflow: hidden;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.section-bg:hover {
+    background-position: 50% !important;
 }
 
 .bg-fade-right {
@@ -333,27 +341,62 @@ span.tag:hover {
 }
 
 .animated {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes scroll {
-    100% { background-position: 0% 50%; }
-    0% { background-position: 100% 50%; }
+.animated2 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
 }
 
-@keyframes scroll {
-    100% { background-position: 0% 50%; }
-    0% { background-position: 100% 50%; }
+@-webkit-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-500px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
 }
 
-.scroll {
-    -webkit-animation-name: scroll;
-    animation-name: scroll;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
 }
 
 @media (max-width: 768px) {
