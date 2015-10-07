@@ -8,6 +8,7 @@ body {
     color: #141010;
     font-size: 14px;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -100,6 +101,10 @@ footer a:link, footer a:hover, footer a:visited {
     padding-top: 100px;
 }
 
+#intro a:visited {
+    color: #646060;
+}
+
 #clients {
     background-color: #a5f;
     padding: 20px;
@@ -111,6 +116,16 @@ footer a:link, footer a:hover, footer a:visited {
     margin-left: 0.5em;
     font-size: 250%;
     font-style: italic;
+}
+
+#gallery {
+    margin: 20px -20px;
+    overflow-x: hidden;
+    width: 5200px;
+}
+
+#gallery img {
+    width: 200px;
 }
 
 #news {
@@ -380,6 +395,29 @@ span.tag:hover {
 .bounceInDown {
     -webkit-animation-name: bounceInDown;
     animation-name: bounceInDown;
+}
+
+@-webkit-keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2600px); }
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2600px); }
+}
+
+.scroll {
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: scrollLeft;
+    animation-name: scrollLeft;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 @media (max-width: 900px) {

@@ -12,21 +12,19 @@
 (def projects
   {:babel    {:name    "thi.ng/babel"
               :version "0.3.2.1"
-              :target  [:emacs]
               :stars   30
               :lit     true
               :loc     98
-              :tags    ["template" "literate programming"]
+              :tags    ["template" "literate programming" "emacs" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/babel/hero.jpg"
               :bg-pos  "50% 65%"
               :desc    "Project template for polyglot, literate programming with Emacs & Org-mode"}
    :color    {:name    "thi.ng/color"
               :version "1.0.0"
-              :target  [:clj :cljs]
               :stars   21
               :lit     true
               :loc     1742
-              :tags    ["color" "dataviz" "interop" "conversion"]
+              :tags    ["color" "dataviz" "interop" "conversion" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/color/hero.jpg"
               :bg-pos  "50% 100%"
               :desc    "Color space conversions (RGB, HSV, HSL, CSS, CMYK, HCY, YUV etc.), presets & gradients"}
@@ -35,47 +33,43 @@
               :target  [:clj]
               :stars   2
               :loc     178
-              :tags    ["encryption" "interop"]
+              :tags    ["encryption" "interop" "clojure"]
               :bg-uri  "/img/projects/crypto/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "GPG keypair generation, encryption & decryption facilities"}
    :domus    {:name    "thi.ng/domus"
               :version "0.2.0"
-              :target  [:cljs]
               :stars   1
               :lit     true
               :loc     505
-              :tags    ["dom" "async" "formatting" "interop"]
+              :tags    ["dom" "async" "formatting" "interop" "clojurescript"]
               :bg-uri  "/img/projects/domus/hero.jpg"
               :bg-pos  "50% 0%"
               :desc    "DOM generation, manipulation, async event bus and browser utilities"}
    :dstruct  {:name    "thi.ng/dstruct"
               :version "0.1.1"
-              :target  [:clj :cljs]
               :stars   1
               :lit     true
               :loc     473
-              :tags    ["graph" "collections" "binary"]
+              :tags    ["graph" "collections" "binary" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/dstruct/hero.jpg"
               :bg-pos  "50% 35%"
               :desc    "Data structures & utilities: Disjoint sets, Interval Trees, collection helpers, binary data I/O"}
    :fourier  {:name    "thi.ng/fourier"
               :version "0.1.0"
-              :target  [:clj]
               :stars   0
               :lit     true
               :loc     392
-              :tags    ["audio" "analysis" "dataviz"]
+              :tags    ["audio" "analysis" "dataviz" "clojure"]
               :bg-uri  "/img/projects/fourier/hero.jpg"
               :bg-pos  "50% 60%"
               :desc    "Audio frequency analysis & visualization"}
    :geom     {:name    "thi.ng/geom"
               :version "0.0.881"
-              :target  [:clj :cljs]
               :stars   182
               :lit     true
               :loc     13926
-              :tags    ["2d" "3d" "math" "analysis" "animation" "fabrication" "dataviz" "generative" "mesh" "svg" "matrix" "physics" "voxel" "webgl"]
+              :tags    ["2d" "3d" "math" "analysis" "animation" "fabrication" "dataviz" "generative" "mesh" "svg" "matrix" "physics" "voxel" "webgl" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/geom/hero.jpg"
               :bg-pos  "50% 0%"
               :desc    "Comprehensive computational 2d / 3d geometry & visualization library"
@@ -105,11 +99,10 @@
                          :desc "WebGL rendering, shader lib & type conversions"}]}
    :fabric   {:name    "thi.ng/fabric"
               :version "0.0.376"
-              :target  [:clj :cljs]
               :stars   19
               :lit     true
               :loc     4796
-              :tags    ["dsl" "declarative" "async" "graph" "linked data" "query" "parser" "server" "dataviz"]
+              :tags    ["dsl" "declarative" "async" "graph" "linked data" "query" "parser" "server" "dataviz" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/fabric/hero.jpg"
               :bg-pos  "50% 15%"
               :desc    "Signal/Collect inspired Compute graph infrastructure, fact graph, query engine & linked data server"
@@ -124,85 +117,76 @@
                          :desc "linked data server & query enpoint"}]}
    :luxor    {:name    "thi.ng/luxor"
               :version "0.3.1"
-              :target  [:clj :lux]
               :stars   56
               :lit     true
               :loc     1309
-              :tags    ["dsl" "3d" "graph" "conversion" "rendering"]
+              :tags    ["dsl" "3d" "graph" "conversion" "rendering" "clojure" "luxrender"]
               :bg-uri  "/img/projects/luxor/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "Scene graph compiler, generator & mesh exporter for rendering with Luxrender"}
    :math     {:name    "thi.ng/math"
               :version "0.1.4"
-              :target  [:clj :cljs]
               :stars   3
               :lit     true
               :loc     906
-              :tags    ["interpolation" "math" "macros" "binary" "interop"]
+              :tags    ["interpolation" "math" "macros" "binary" "interop" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/math/hero.jpg"
               :bg-pos  "50% 80%"
               :desc    "Useful math ops, bit manipulation, macro definitions to simplify complex equations"}
    :morpho   {:name    "thi.ng/morphogen"
               :version "0.1.1"
-              :target  [:clj :cljs]
               :stars   74
               :lit     true
               :loc     895
-              :tags    ["dsl" "generative" "fabrication" "3d" "mesh"]
+              :tags    ["dsl" "generative" "fabrication" "3d" "mesh" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/morphogen/hero.jpg"
               :bg-pos  "50% 40%"
               :desc    "3d form evolution through tree-based transformations"}
    :ndarray  {:name    "thi.ng/ndarray"
               :version "0.3.0"
-              :target  [:clj :cljs]
               :stars   9
               :lit     true
               :loc     813
-              :tags    ["matrix" "math" "2d" "3d" "4d" "macros"]
+              :tags    ["matrix" "math" "2d" "3d" "4d" "macros" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/ndarray/hero.jpg"
               :bg-pos  "50% 40%"
               :desc    "Multidimensional arrays with almost zero-cost view transformations, isoline extraction"}
    :raymarch {:name    "thi.ng/raymarchcl"
               :version "0.1.0"
-              :target  [:clj :opencl]
               :stars   106
               :loc     894
-              :tags    ["rendering" "voxel" "opencl"]
+              :tags    ["rendering" "voxel" "opencl"  "clojure"]
               :bg-uri  "/img/projects/raymarchcl/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    [:div "Experimental OpenCL voxel raymarch renderer using " [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]}
    :sgraph   {:name    "thi.ng/shadergraph"
               :version "0.1.1"
-              :target  [:clj :cljs :glsl]
               :stars   11
               :lit     true
               :loc     554
-              :tags    ["rendering" "graph" "gpu" "webgl" "macros"]
+              :tags    ["rendering" "graph" "gpu" "webgl" "macros" "clojurescript"]
               :bg-uri  "/img/projects/shadergraph/hero.jpg"
               :bg-pos  "50% 33%"
               :desc    "Composable WebGL / GLSL shader library & dependency graph resolution"}
    :simplecl {:name    "thi.ng/simplecl"
               :version "0.2.2"
-              :target  [:clj :opencl]
               :stars   11
               :loc     701
-              :tags    ["dsl" "interop" "opencl" "gpu"]
+              :tags    ["dsl" "interop" "opencl" "gpu" "clojure"]
               :bg-uri  "/img/projects/simplecl/hero.jpg"
               :bg-pos  "50% 0%"
               :desc    "OpenCL wrapper & highlevel processing pipeline for GPU computing"}
    :strf     {:name    "thi.ng/strf"
               :version "0.2.1"
-              :target  [:clj :cljs]
               :stars   1
               :lit     true
               :loc     209
-              :tags    ["formatting" "parser" "date"]
+              :tags    ["formatting" "parser" "date" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/strf/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "Extensible string formatting, date formatting, number parsers"}
    :structg  {:name    "thi.ng/structgen"
               :version "0.2.1"
-              :target  [:clj :opencl]
               :stars   4
               :loc     507
               :tags    ["interop" "binary" "parser" "conversion" "opencl"]
@@ -211,7 +195,6 @@
               :desc    "Interop library for working with native C structs and binary formats"}
    :trio     {:name    "thi.ng/trio"
               :version "0.1.0"
-              :target  [:clj :cljs]
               :stars   39
               :lit     true
               :loc     3066
@@ -221,40 +204,36 @@
               :desc    "Simple, extensible triplestore API and powerful SPARQL-inspired query engine"}
    :tarrays  {:name    "thi.ng/typedarrays"
               :version "0.1.2"
-              :target  [:cljs]
               :stars   2
               :lit     true
               :loc     133
-              :tags    ["interop" "binary" "webgl"]
+              :tags    ["interop" "binary" "webgl" "clojurescript"]
               :bg-uri  "/img/projects/typedarrays/hero.jpg"
               :bg-pos  "50% 40%"
               :desc    "Clojurescript wrapper & convenience functions for JavaScript typed arrays"}
    :tweeny   {:name    "thi.ng/tweeny"
               :version "0.1.0-SNAPSHOT"
-              :target  [:clj :cljs]
               :stars   5
               :loc     122
-              :tags    ["interpolation" "animation" "math"]
+              :tags    ["interpolation" "animation" "math" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/tweeny/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "Keyframe interpolation of arbitrary nested values, completely customizable"}
    :validate {:name    "thi.ng/validate"
               :version "0.1.3"
-              :target  [:clj :cljs]
               :stars   20
               :loc     383
-              :tags    ["dsl" "validation" "declarative" "collections"]
+              :tags    ["dsl" "validation" "declarative" "collections" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/validate/hero.jpg"
               :bg-pos  "50% 80%"
               :desc    "Composable data validation & correction for structured data"}
    :xerror   {:name    "thi.ng/xerror"
               :version "0.1.0"
-              :target  [:clj :cljs]
               :stars   0
               :loc     17
-              :tags    ["error handling"]
+              :tags    ["error handling" "clojure" "clojurescript"]
               :bg-uri  "/img/projects/xerror/hero.jpg"
-              :bg-pos  "50% 60%"
+              :bg-pos  "50% 75%"
               :desc    "Error throwing functions for Clojure & Clojurescript"}})
 
 (def project-sort-criteria
@@ -269,14 +248,6 @@
         (fn [acc t] (assoc acc t t))
         (sorted-map))
        (#(assoc % "!all" "all"))))
-
-(def targets
-  {:clj    "Clojure"
-   :cljs   "Clojurescript"
-   :opencl "OpenCL"
-   :lux    "Luxrender"
-   :glsl   "GLSL"
-   :emacs  "Emacs & Org-mode"})
 
 (def counts
   ["zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten"])
@@ -318,8 +289,14 @@
      [:div.row
       [:div (if modules {:class "col2"} {})
        [:table
-        [:tr [:th "Leiningen:"] [:td [:input {:readonly true :type :text :value (str "[" name " \"" version "\"]")}]]]
-        [:tr [:th "Target:"] [:td (str/join ", " (map targets target))]]
+        [:tr [:th "Leiningen:"]
+         [:td [:input {:readOnly true
+                       :type     :text
+                       :value    (str "[" name " \"" version "\"]")
+                       :on-click (fn [e] (.select (.-target e)))}]]]
+        [:tr [:th "X-Ref:"] [:td
+                             [:a {:href (str "https://crossclj.info/doc/" name "/latest/index.html")} "CrossCLJ"] " / "
+                             [:a {:href (str "http://clojars.org/" name)} "clojars.org"]]]
         [:tr [:th [:abbr {:title "Literate programming format"} "Literate:"]] [:td (if lit "yes" "no")]]
         [:tr [:th [:abbr {:title "Source Lines of Code"} "SLOC:"]] [:td loc]]
         [:tr [:th "GitHub stars:"] [:td stars]]
