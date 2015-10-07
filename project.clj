@@ -27,7 +27,7 @@
 
   :cljsbuild     {:builds [{:id           "dev"
                             :source-paths ["src"]
-                            :figwheel     {:on-jsload "thi.ng.site.main.core/on-js-reload" }
+                            :figwheel     {:on-jsload "thi.ng.site.main.core/on-js-reload"}
                             :compiler     {:main                 thi.ng.site.main.core
                                            :asset-path           "js/main/out"
                                            :output-to            "resources/public/js/main/app.js"
@@ -41,9 +41,9 @@
                                            :pretty-print  false}}
                            {:id           "dev-workshop"
                             :source-paths ["src"]
-                            :figwheel     {:on-jsload "thi.ng.site.workshop.core/on-js-reload" }
+                            :figwheel     {:on-jsload "thi.ng.site.workshop.core/on-js-reload"}
                             :compiler     {:main                 thi.ng.site.workshop.core
-                                           :asset-path           "js/compiled/out"
+                                           :asset-path           "js/workshop/out"
                                            :output-to            "resources/public/js/workshop/app.js"
                                            :output-dir           "resources/public/js/workshop/out"
                                            :source-map-timestamp true}}

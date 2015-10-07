@@ -319,6 +319,10 @@ span.tag:hover {
     background: #f09;
 }
 
+.loading {
+    margin: 1em 0;
+}
+
 .anim, .anim2, .anim3, .anim4 {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -696,4 +700,7 @@ span.tag:hover {
 }
 .fa-github:before {
     content: "\f09b";
+}
+.fa-spinner:before {
+  content: "\f110";
 }
