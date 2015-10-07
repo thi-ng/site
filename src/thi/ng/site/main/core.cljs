@@ -130,7 +130,7 @@
               :loc     1309
               :tags    ["dsl" "3d" "graph" "conversion" "rendering"]
               :bg-uri  "/img/projects/luxor/hero.jpg"
-              :bg-pos  "50% 60%"
+              :bg-pos  "50% 70%"
               :desc    "Scene graph compiler, generator & mesh exporter for rendering with Luxrender"}
    :math     {:name    "thi.ng/math"
               :version "0.1.4"
@@ -161,7 +161,7 @@
               :tags    ["matrix" "math" "2d" "3d" "4d" "macros"]
               :bg-uri  "/img/projects/ndarray/hero.jpg"
               :bg-pos  "50% 40%"
-              :desc    "Multidimensional arrays with almost zero-cost view transformations"}
+              :desc    "Multidimensional arrays with almost zero-cost view transformations, isoline extraction"}
    :raymarch {:name    "thi.ng/raymarchcl"
               :version "0.1.0"
               :target  [:clj :opencl]
@@ -170,7 +170,7 @@
               :tags    ["rendering" "voxel" "opencl"]
               :bg-uri  "/img/projects/raymarchcl/hero.jpg"
               :bg-pos  "50% 70%"
-              :desc    "Experimental OpenCL voxel raymarch renderer using thi.ng/simplecl"}
+              :desc    [:div "Experimental OpenCL voxel raymarch renderer using " [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]}
    :sgraph   {:name    "thi.ng/shadergraph"
               :version "0.1.1"
               :target  [:clj :cljs :glsl]
@@ -282,7 +282,7 @@
   ["zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten"])
 
 #_(def clients
-  ["Barbican" "Google" "Open Data Institute" "Unicredit" "Nike" "Leeds College of Music" "Resonate Festival" "SAC Städelschule Frankfurt" "FNB" "Victoria & Albert Museum" "Moving Brands"])
+    ["Barbican" "Google" "Open Data Institute" "Unicredit" "Nike" "Leeds College of Music" "Resonate Festival" "SAC Städelschule Frankfurt" "FNB" "Victoria & Albert Museum" "Moving Brands"])
 
 (defn on-js-reload []
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
@@ -301,7 +301,7 @@
 (defn project-section
   [i {:keys [name bg-uri bg-pos desc modules version stars target tags lit loc]}]
   (let [cls (if (even? i) "even" "odd")]
-    [:section {:class cls}
+    [:section {:id name :class cls}
      [:div.section-bg
       {:style {:background-image (str "url(" bg-uri ")")
                :background-position bg-pos
@@ -318,9 +318,9 @@
      [:div.row
       [:div (if modules {:class "col2"} {})
        [:table
-        [:tr [:th "Leiningen:"] [:td "[" name " \"" version "\"]"]]
+        [:tr [:th "Leiningen:"] [:td [:input {:readonly true :type :text :value (str "[" name " \"" version "\"]")}]]]
         [:tr [:th "Target:"] [:td (str/join ", " (map targets target))]]
-        [:tr [:th "Literate format:"] [:td (if lit "yes" "no")]]
+        [:tr [:th [:abbr {:title "Literate programming format"} "Literate:"]] [:td (if lit "yes" "no")]]
         [:tr [:th [:abbr {:title "Source Lines of Code"} "SLOC:"]] [:td loc]]
         [:tr [:th "GitHub stars:"] [:td stars]]
         ]]
@@ -397,7 +397,8 @@
 
 (defn main
   []
-  (dispatch-sync [:init-app])
+  (when (not @(subscribe [:inited?]))
+    (dispatch-sync [:init-app]))
   (.initializeTouchEvents js/React true)
   (reagent/render-component
    [main-panel] (.getElementById js/document "app")))

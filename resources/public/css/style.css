@@ -252,6 +252,10 @@ table {
     border-spacing: 0;
 }
 
+tr {
+    height: 1.5em;
+}
+
 th {
     font-weight: bold;
     text-align: left;
@@ -260,6 +264,24 @@ th {
 td {
     padding-left: 20px;
 }
+
+input[type=text] {
+    width: 15em;
+    font-family: 'Lekton',sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #141010;
+    background: #f8f6f6;
+    border:0;
+    padding: 4px;
+    box-shadow: 1px 1px 1px #646060;
+}
+
+input[type=text]:focus {
+    outline: 0;
+    background: #fff;
+}
+
 
 abbr {
     text-decoration: underline;
@@ -282,7 +304,7 @@ span.tag:hover {
     background: #f09;
 }
 
-.animated, .animated2 {
+.anim, .anim2, .anim3, .anim4 {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -291,9 +313,19 @@ span.tag:hover {
     animation-timing-function: ease-in-out;
 }
 
-.animated2 {
+.anim2 {
     animation-delay: 0.2s;
     -webkit-animation-delay: 0.2s;
+}
+
+.anim3 {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.anim4 {
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
 }
 
 @-webkit-keyframes bounceInDown {
@@ -328,6 +360,21 @@ span.tag:hover {
     100% {
         transform: translateY(0);
     }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
 }
 
 .bounceInDown {

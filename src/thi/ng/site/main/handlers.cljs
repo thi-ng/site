@@ -23,7 +23,7 @@
    (assoc db
           :project-sort {:sel :loc :open? false}
           :tag-filter   {:sel "!all" :open? false}
-          )))
+          :inited?      true)))
 
 (register-handler
  :dd-open
@@ -37,10 +37,12 @@
  :dd-change
  (fn [db [_ id sel]]
    (info :dd-change id sel)
-   ;;(set! (-> js/window .-location .-hash) "#projects")
    (-> db
        (close-all-dropdowns)
        (assoc-in [id :sel] sel))))
+
+(register-sub
+ :inited? (fn [db _] (reaction (:inited? @db))))
 
 (register-sub
  :project-sort (fn [db _] (reaction (:project-sort @db))))
