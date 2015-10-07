@@ -9,6 +9,8 @@
    [reagent.core :as reagent :refer [atom]]
    [re-frame.core :refer [subscribe dispatch dispatch-sync]]))
 
+(def project-img-base "/img/projects/")
+
 (def projects
   {:babel    {:name    "thi.ng/babel"
               :version "0.3.2.1"
@@ -16,7 +18,7 @@
               :lit     true
               :loc     98
               :tags    ["template" "literate programming" "emacs" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/babel/hero.jpg"
+              :bg-uri  "babel/hero.jpg"
               :bg-pos  "50% 65%"
               :desc    "Project template for polyglot, literate programming with Emacs & Org-mode"}
    :color    {:name    "thi.ng/color"
@@ -25,7 +27,7 @@
               :lit     true
               :loc     1742
               :tags    ["color" "dataviz" "interop" "conversion" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/color/hero.jpg"
+              :bg-uri  "color/hero.jpg"
               :bg-pos  "50% 100%"
               :desc    "Color space conversions (RGB, HSV, HSL, CSS, CMYK, HCY, YUV etc.), presets & gradients"}
    :crypto   {:name    "thi.ng/crypto"
@@ -34,7 +36,7 @@
               :stars   2
               :loc     178
               :tags    ["encryption" "interop" "clojure"]
-              :bg-uri  "/img/projects/crypto/hero.jpg"
+              :bg-uri  "crypto/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "GPG keypair generation, encryption & decryption facilities"}
    :domus    {:name    "thi.ng/domus"
@@ -43,7 +45,7 @@
               :lit     true
               :loc     505
               :tags    ["dom" "async" "formatting" "interop" "clojurescript"]
-              :bg-uri  "/img/projects/domus/hero.jpg"
+              :bg-uri  "domus/hero.jpg"
               :bg-pos  "50% 0%"
               :desc    "DOM generation, manipulation, async event bus and browser utilities"}
    :dstruct  {:name    "thi.ng/dstruct"
@@ -52,7 +54,7 @@
               :lit     true
               :loc     473
               :tags    ["graph" "collections" "binary" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/dstruct/hero.jpg"
+              :bg-uri  "dstruct/hero.jpg"
               :bg-pos  "50% 35%"
               :desc    "Data structures & utilities: Disjoint sets, Interval Trees, collection helpers, binary data I/O"}
    :fourier  {:name    "thi.ng/fourier"
@@ -61,7 +63,7 @@
               :lit     true
               :loc     392
               :tags    ["audio" "analysis" "dataviz" "clojure"]
-              :bg-uri  "/img/projects/fourier/hero.jpg"
+              :bg-uri  "fourier/hero.jpg"
               :bg-pos  "50% 60%"
               :desc    "Audio frequency analysis & visualization"}
    :geom     {:name    "thi.ng/geom"
@@ -70,32 +72,33 @@
               :lit     true
               :loc     13926
               :tags    ["2d" "3d" "math" "analysis" "animation" "fabrication" "dataviz" "generative" "mesh" "svg" "matrix" "physics" "voxel" "webgl" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/geom/hero.jpg"
+              :bg-uri  "geom/hero.jpg"
               :bg-pos  "50% 0%"
               :desc    "Comprehensive computational 2d / 3d geometry & visualization library"
+              :module-base "https://github.com/thi-ng/geom/blob/master/"
               :modules [{:id   "geom-core"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-core/src/index.org"
+                         :uri  "src/index.org"
                          :desc "protocols, vector algebra, intersections"}
                         {:id   "geom-meshops"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-meshops/src/index.org"
+                         :uri  "src/index.org"
                          :desc "mesh operations, I/O, subdivisions"}
                         {:id   "geom-physics"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-physics/src/index.org"
+                         :uri  "src/index.org"
                          :desc "verlet physics engine, behaviors"}
                         {:id   "geom-svg"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-svg/src/index.org"
+                         :uri  "src/index.org"
                          :desc "SVG export & 3d rendering w/ software shaders"}
                         {:id   "geom-types"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-types/src/index.org"
+                         :uri  "src/index.org"
                          :desc "2d / 3d geometry types"}
                         {:id   "geom-viz"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-viz/src/index.org"
+                         :uri  "src/index.org"
                          :desc "data visualization & charting"}
                         {:id   "geom-voxel"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-voxel/src/index.org"
+                         :uri  "src/index.org"
                          :desc "sparse voxel trees, iso-surface generator"}
                         {:id   "geom-webgl"
-                         :uri  "https://github.com/thi-ng/geom/blob/master/geom-webgl/src/index.org"
+                         :uri  "src/index.org"
                          :desc "WebGL rendering, shader lib & type conversions"}]}
    :fabric   {:name    "thi.ng/fabric"
               :version "0.0.376"
@@ -103,17 +106,18 @@
               :lit     true
               :loc     4796
               :tags    ["dsl" "declarative" "async" "graph" "linked data" "query" "parser" "server" "dataviz" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/fabric/hero.jpg"
+              :bg-uri  "fabric/hero.jpg"
               :bg-pos  "50% 15%"
               :desc    "Signal/Collect inspired Compute graph infrastructure, fact graph, query engine & linked data server"
+              :module-base "https://github.com/thi-ng/fabric/blob/master/"
               :modules [{:id   "fabric-core"
-                         :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-core/README.org"
+                         :uri  "README.org"
                          :desc "protocols, compute graph core types"}
                         {:id   "fabric-facts"
-                         :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-facts/README.org"
+                         :uri  "README.org"
                          :desc "fact graph, query engine, query DSL, query visualization, fact parsers"}
                         {:id   "fabric-ld"
-                         :uri  "https://github.com/thi-ng/fabric/blob/master/fabric-ld/README.org"
+                         :uri  "README.org"
                          :desc "linked data server & query enpoint"}]}
    :luxor    {:name    "thi.ng/luxor"
               :version "0.3.1"
@@ -121,7 +125,7 @@
               :lit     true
               :loc     1309
               :tags    ["dsl" "3d" "graph" "conversion" "rendering" "clojure" "luxrender"]
-              :bg-uri  "/img/projects/luxor/hero.jpg"
+              :bg-uri  "luxor/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "Scene graph compiler, generator & mesh exporter for rendering with Luxrender"}
    :math     {:name    "thi.ng/math"
@@ -130,7 +134,7 @@
               :lit     true
               :loc     906
               :tags    ["interpolation" "math" "macros" "binary" "interop" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/math/hero.jpg"
+              :bg-uri  "math/hero.jpg"
               :bg-pos  "50% 80%"
               :desc    "Useful math ops, bit manipulation, macro definitions to simplify complex equations"}
    :morpho   {:name    "thi.ng/morphogen"
@@ -139,7 +143,7 @@
               :lit     true
               :loc     895
               :tags    ["dsl" "generative" "fabrication" "3d" "mesh" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/morphogen/hero.jpg"
+              :bg-uri  "morphogen/hero.jpg"
               :bg-pos  "50% 40%"
               :desc    "3d form evolution through tree-based transformations"}
    :ndarray  {:name    "thi.ng/ndarray"
@@ -148,24 +152,25 @@
               :lit     true
               :loc     813
               :tags    ["matrix" "math" "2d" "3d" "4d" "macros" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/ndarray/hero.jpg"
+              :bg-uri  "ndarray/hero.jpg"
               :bg-pos  "50% 40%"
-              :desc    "Multidimensional arrays with almost zero-cost view transformations, isoline extraction"}
+              :desc    "Multidimensional primitive arrays with almost zero-cost view transformations, isoline extraction"}
    :raymarch {:name    "thi.ng/raymarchcl"
               :version "0.1.0"
               :stars   106
               :loc     894
               :tags    ["rendering" "voxel" "opencl"  "clojure"]
-              :bg-uri  "/img/projects/raymarchcl/hero.jpg"
+              :bg-uri  "raymarchcl/hero.jpg"
               :bg-pos  "50% 70%"
-              :desc    [:div "Experimental OpenCL voxel raymarch renderer using " [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]}
+              :desc    [:div "Experimental OpenCL voxel raymarch renderer using "
+                        [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]}
    :sgraph   {:name    "thi.ng/shadergraph"
               :version "0.1.1"
               :stars   11
               :lit     true
               :loc     554
               :tags    ["rendering" "graph" "gpu" "webgl" "macros" "clojurescript"]
-              :bg-uri  "/img/projects/shadergraph/hero.jpg"
+              :bg-uri  "shadergraph/hero.jpg"
               :bg-pos  "50% 33%"
               :desc    "Composable WebGL / GLSL shader library & dependency graph resolution"}
    :simplecl {:name    "thi.ng/simplecl"
@@ -173,7 +178,7 @@
               :stars   11
               :loc     701
               :tags    ["dsl" "interop" "opencl" "gpu" "clojure"]
-              :bg-uri  "/img/projects/simplecl/hero.jpg"
+              :bg-uri  "simplecl/hero.jpg"
               :bg-pos  "50% 0%"
               :desc    "OpenCL wrapper & highlevel processing pipeline for GPU computing"}
    :strf     {:name    "thi.ng/strf"
@@ -182,7 +187,7 @@
               :lit     true
               :loc     209
               :tags    ["formatting" "parser" "date" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/strf/hero.jpg"
+              :bg-uri  "strf/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "Extensible string formatting, date formatting, number parsers"}
    :structg  {:name    "thi.ng/structgen"
@@ -190,7 +195,7 @@
               :stars   4
               :loc     507
               :tags    ["interop" "binary" "parser" "conversion" "opencl"]
-              :bg-uri  "/img/projects/structgen/hero.jpg"
+              :bg-uri  "structgen/hero.jpg"
               :bg-pos  "50% 60%"
               :desc    "Interop library for working with native C structs and binary formats"}
    :trio     {:name    "thi.ng/trio"
@@ -199,7 +204,7 @@
               :lit     true
               :loc     3066
               :tags    ["dsl" "graph" "linked data" "parser" "query" "declarative"]
-              :bg-uri  "/img/projects/trio/hero.jpg"
+              :bg-uri  "trio/hero.jpg"
               :bg-pos  "50% 40%"
               :desc    "Simple, extensible triplestore API and powerful SPARQL-inspired query engine"}
    :tarrays  {:name    "thi.ng/typedarrays"
@@ -208,7 +213,7 @@
               :lit     true
               :loc     133
               :tags    ["interop" "binary" "webgl" "clojurescript"]
-              :bg-uri  "/img/projects/typedarrays/hero.jpg"
+              :bg-uri  "typedarrays/hero.jpg"
               :bg-pos  "50% 40%"
               :desc    "Clojurescript wrapper & convenience functions for JavaScript typed arrays"}
    :tweeny   {:name    "thi.ng/tweeny"
@@ -216,7 +221,7 @@
               :stars   5
               :loc     122
               :tags    ["interpolation" "animation" "math" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/tweeny/hero.jpg"
+              :bg-uri  "tweeny/hero.jpg"
               :bg-pos  "50% 70%"
               :desc    "Keyframe interpolation of arbitrary nested values, completely customizable"}
    :validate {:name    "thi.ng/validate"
@@ -224,7 +229,7 @@
               :stars   20
               :loc     383
               :tags    ["dsl" "validation" "declarative" "collections" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/validate/hero.jpg"
+              :bg-uri  "validate/hero.jpg"
               :bg-pos  "50% 80%"
               :desc    "Composable data validation & correction for structured data"}
    :xerror   {:name    "thi.ng/xerror"
@@ -232,7 +237,7 @@
               :stars   0
               :loc     17
               :tags    ["error handling" "clojure" "clojurescript"]
-              :bg-uri  "/img/projects/xerror/hero.jpg"
+              :bg-uri  "xerror/hero.jpg"
               :bg-pos  "50% 75%"
               :desc    "Error throwing functions for Clojure & Clojurescript"}})
 
@@ -252,58 +257,70 @@
 (def counts
   ["zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten"])
 
-#_(def clients
-    ["Barbican" "Google" "Open Data Institute" "Unicredit" "Nike" "Leeds College of Music" "Resonate Festival" "SAC Städelschule Frankfurt" "FNB" "Victoria & Albert Museum" "Moving Brands"])
-
 (defn on-js-reload []
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
   )
 
 (defn project-modules
-  [name modules]
+  [name base modules]
   [:div "This project contains " (counts (count modules)) " sub-modules:"
    [:dl
     (mapcat
      (fn [{:keys [id uri desc]}]
-       [[:dt {:key (str name id)} [:a {:href uri} id]]
+       [[:dt {:key (str name id)} [:a {:href (str base id "/" uri)} id]]
         [:dd {:key (str name id "desc")} desc]])
      modules)]])
 
+(defn project-tag
+  [name]
+  (fn [t]
+    [:span.tag
+     {:key (str name "-" t)
+      :on-click (fn [e]
+                  (.preventDefault e)
+                  (dispatch [:dd-change :tag-filter t]))} t]))
+
 (defn project-section
-  [i {:keys [name bg-uri bg-pos desc modules version stars target tags lit loc]}]
+  [i {:keys [name modules] :as proj}]
   (let [cls (if (even? i) "even" "odd")]
     [:section {:id name :class cls}
      [:div.section-bg
-      {:style {:background-image (str "url(" bg-uri ")")
-               :background-position bg-pos
-               }}
+      {:style {:background-image (str "url(" project-img-base (:bg-uri proj) ")")
+               :background-position (:bg-pos proj)}}
       [:div.bg-fade-right]
       [:h2 [:a {:href (str "//" name)} name]]]
-     [:p desc]
-     [:p (map
-          (fn [t]
-            [:span.tag
-             {:key (str name "-" t)
-              :on-click (fn [e] (.preventDefault e) (dispatch [:dd-change :tag-filter t]))} t])
-          (sort tags))]
+     [:p (:desc proj)]
+     [:p (->> (:tags proj) (sort) (map (project-tag name)))]
      [:div.row
       [:div (if modules {:class "col2"} {})
        [:table
-        [:tr [:th "Leiningen:"]
-         [:td [:input {:readOnly true
-                       :type     :text
-                       :value    (str "[" name " \"" version "\"]")
-                       :on-click (fn [e] (.select (.-target e)))}]]]
-        [:tr [:th "X-Ref:"] [:td
-                             [:a {:href (str "https://crossclj.info/doc/" name "/latest/index.html")} "CrossCLJ"] " / "
-                             [:a {:href (str "http://clojars.org/" name)} "clojars.org"]]]
-        [:tr [:th [:abbr {:title "Literate programming format"} "Literate:"]] [:td (if lit "yes" "no")]]
-        [:tr [:th [:abbr {:title "Source Lines of Code"} "SLOC:"]] [:td loc]]
-        [:tr [:th "GitHub stars:"] [:td stars]]
-        ]]
+        [:tr
+         [:th "Leiningen:"]
+         [:td
+          [:input
+           {:readOnly true
+            :type     :text
+            :value    (str "[" name " \"" (:version proj) "\"]")
+            :on-click (fn [e] (.select (.-target e)))}]]]
+        [:tr
+         [:th "X-Ref:"]
+         [:td
+          [:a {:href (str "https://crossclj.info/doc/" name "/latest/index.html")}
+           "CrossCLJ"] " / "
+          [:a {:href (str "http://clojars.org/" name)}
+           "clojars.org"]]]
+        [:tr
+         [:th [:abbr {:title "Literate programming format"} "Org-mode:"]]
+         [:td (if (:lit proj) "yes" "no")]]
+        [:tr
+         [:th [:abbr {:title "Source Lines of Code"} "SLOC:"]]
+         [:td (:loc proj)]]
+        [:tr
+         [:th "GitHub stars:"]
+         [:td (:stars proj)]]]]
       [:div.col2
        (when modules
-         (project-modules name modules))]]
+         (project-modules name (:module-base proj) modules))]]
      [:div.space "\u00a0"]]))
 
 (defn dropdown
@@ -314,8 +331,7 @@
       (info id (:sel @dd))
       [:div.dropdown
        (if (:open? @dd)
-         {:class "dd-open" :style {:margin-top (str "-" top)}
-          }
+         {:class "dd-open" :style {:margin-top (str "-" top)}}
          {:class "dd-closed"})
        (if (:open? @dd)
          (map
@@ -330,38 +346,18 @@
           {:on-click (fn [e] (.preventDefault e) (dispatch [:dd-open id]))}
           (get opts (:sel @dd))])])))
 
-(comment
-  (defn client-list
-    []
-    [:div#clients
-     "Used in projects for: "
-     [:span.list
-      (->> clients
-           (sort)
-           (str/join " | "))]])
-
-  (defn footer
-    []
-    [:footer
-     [:a {:href "https://github.com/thi-ng/"} [:i.fa.fa-github] " thi-ng"]
-     " | "
-     [:a {:href "https://twitter.com/thing_clj"} [:i.fa.fa-twitter] " @thing_clj"]
-     " | "
-     [:a {:href "https://twitter.com/toxi"} [:i.fa.fa-twitter] " @toxi"]
-     " | © 2015 Karsten Schmidt"]))
-
 (defn main-panel
   []
   (let [psort   (subscribe [:project-sort])
         tfilter (subscribe [:tag-filter])]
     (fn []
-      (let [order     (:sel @psort)
-            tag       (:sel @tfilter)
-            projects' (if (= "!all" tag)
-                        (vals projects)
-                        (filter #((set (:tags %)) tag) (vals projects)))
-            projects' (sort-by order projects')
-            projects' (if (= :name order) projects' (reverse projects'))]
+      (let [order    (:sel @psort)
+            tag      (:sel @tfilter)
+            projects (if (= "!all" tag)
+                       (vals projects)
+                       (filter #((set (:tags %)) tag) (vals projects)))
+            projects (sort-by order projects)
+            projects (if (= :name order) projects (reverse projects))]
         [:div
          [:h1#projects "projects "
           [:div.dd-wrapper
@@ -370,7 +366,7 @@
            [dropdown :tag-filter all-tags]]]
          (map-indexed
           (fn [i p] (with-meta [project-section i p] {:key (:name p)}))
-          projects')]))))
+          projects)]))))
 
 (defn main
   []
