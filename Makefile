@@ -6,6 +6,10 @@ MAIN = $(BUILD)/main
 MAIN_TARGET = s3://thi.ng/
 MAIN_SRC = $(SRC)/main
 
+WS = $(BUILD)/workshop
+WS_TARGET = s3://workshop.thi.ng/
+WS_SRC = $(SRC)/workshop
+
 HTML_OPTS = --remove-surrounding-spaces max
 
 main-html: $(MAIN)/index.html
@@ -13,6 +17,14 @@ main-js: $(MAIN)/js/main/app.js
 main-css: $(MAIN)/css/style.css
 main-fonts: $(MAIN)/fonts
 main-img: $(MAIN)/img
+
+ws-html: $(WS)/index.html
+ws-js: $(WS)/js/workshop/app.js
+ws-css: $(WS)/css/workshop.css
+ws-fonts: $(WS)/fonts
+ws-img: $(WS)/img
+
+############# Main
 
 $(MAIN)/index.html: $(RES)/index.html
 	@echo "compressing html..."
@@ -46,12 +58,51 @@ install-main: main
 	@echo "syncing with: $(MAIN_TARGET)"
 	@s3cmd -P sync $(MAIN)/ $(MAIN_TARGET)
 
-clean:
-	@echo "cleaning..."
-	@rm -rf $(BUILD)
-
 serve-main:
 	@sleep 1 && open "http://localhost:8000/" &
 	@cd $(MAIN) && python3 -m http.server
 
-.PHONY: clean serve-main
+############# Workshop
+
+$(WS)/index.html: $(RES)/workshop.html
+	@echo "compressing html..."
+	@mkdir -p $(WS)
+	@htmlcompressor $(HTML_OPTS) -o $(WS)/index.html $(RES)/workshop.html
+
+$(WS)/css/workshop.css: $(RES)/css/workshop.css
+	@echo "compressing css..."
+	@mkdir -p $(WS)/css
+	@cleancss -o $(WS)/css/workshop.css $(RES)/css/workshop.css
+
+$(WS)/fonts: $(RES)/fonts
+	@echo "copying fonts..."
+	@mkdir -p $(WS)/fonts
+	@cp -R $(RES)/fonts/ $(WS)/fonts
+
+$(WS)/img: $(RES)/img/workshop $(RES)/favicon.ico
+	@echo "copying images..."
+	@cp -R $(RES)/img/ $(WS)/img
+	@rm -rf $(WS)/img/projects $(WS)/img/all-commits.svg
+	@cp $(RES)/favicon.ico $(WS)/
+
+$(WS)/js/workshop/app.js: $(WS_SRC)
+	@echo "compiling js..."
+	@lein with-profile prod do clean, cljsbuild once min-workshop
+	@mkdir -p $(WS)/js/workshop
+	@cp $(RES)/js/workshop/app.js $(WS)/js/workshop/
+
+ws: ws-html ws-js ws-css ws-fonts ws-img
+
+install-ws: ws
+	@echo "syncing with: $(WS_TARGET)"
+	@s3cmd -P sync $(WS)/ $(WS_TARGET)
+
+serve-ws:
+	@sleep 1 && open "http://localhost:8000/" &
+	@cd $(WS) && python3 -m http.server
+
+clean:
+	@echo "cleaning..."
+	@rm -rf $(BUILD)
+
+.PHONY: clean serve-main serve-ws

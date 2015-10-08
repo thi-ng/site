@@ -121,7 +121,7 @@ footer a:link, footer a:hover, footer a:visited {
 }
 
 #gallery div {
-    width: 5200px;
+    width: 6000px;
 }
 
 #gallery img {
@@ -248,6 +248,10 @@ section h2 {
 .space {
     clear: both;
     margin-bottom: 1em;
+}
+
+.space:before {
+  content: "\00a0";
 }
 
 .row {
@@ -403,17 +407,17 @@ span.tag:hover {
 
 @-webkit-keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-2600px); }
+    100% { transform: translateX(-3000px); }
 }
 
 @keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-2600px); }
+    100% { transform: translateX(-3000px); }
 }
 
 .scroll {
-    -webkit-animation-duration: 25s;
-    animation-duration: 25s;
+    -webkit-animation-duration: 28s;
+    animation-duration: 28s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-timing-function: linear;
