@@ -1,0 +1,671 @@
+html, body {
+    font-family: 'Lekton', sans-serif;
+    font-style: normal;
+}
+
+body {
+    background: #f8f6f6;
+    color: #141010;
+    font-size: 14px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.limit {
+    max-width: 1280px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    margin: 1em 0 0.5em 0;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 350%;
+    letter-spacing: -1.5px;
+    margin-top: 1em;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h2.title {
+    font-weight: bold;
+}
+
+small {
+    font-size: 14px;
+}
+
+a:link {
+    color: #f09;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f3c;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #646060;
+    text-decoration: none;
+}
+
+a.social:link, a.social:hover, a.social:visited {
+                                   color: #141010 !important;
+                                   text-decoration: none !important;
+                                   padding-right: 1em;
+                               }
+
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+}
+
+#logo {
+    padding: 10px 20px;
+    background-color: rgba(20,16,16,0.95);
+    width: 104px;
+}
+
+#logo img {
+    height: 60px;
+}
+
+footer {
+    background-color: #141010;
+    margin: 0 -20px;
+    padding: 0 20px;
+    color: #f8f6f6;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    font-style: normal;
+    overflow: hidden;
+}
+
+footer a:link, footer a:hover, footer a:visited {
+                                   color: #f8f6f6 !important;
+                                   text-decoration: none !important;
+                               }
+
+#wrapper {
+    padding: 0 20px;
+}
+
+#intro {
+    margin: 0 -20px;
+    padding: 0 20px 30px 20px;
+    max-width: initial;
+    background: #bff;
+    padding-top: 100px;
+}
+
+#intro .space {
+    margin-bottom: -20px;
+}
+
+#gallery {
+    margin: 0px -20px;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+#gallery div {
+    width: 6000px;
+}
+
+#gallery img {
+    width: 200px;
+}
+
+.topics {
+    margin: 0 -20px;
+    background-color: #a5f;
+    padding: 10px 20px;
+    color: #f8f6f6;
+    line-height: 1.2;
+}
+
+.topics .list {
+    font-size: 150%;
+    font-style: italic;
+}
+
+.discount {
+    color: #f09;
+}
+
+#tandc {
+    margin: 0 -20px;
+    background-color: #646060;
+    padding: 10px 50px 10px 20px;
+    color: #f8f6f6;
+    line-height: 1.2;
+}
+
+#tandc a:visited {
+    color: #c4c0c0;
+}
+
+#news {
+    background-color: #4fa;
+    margin: 0 -20px;
+    padding: 26px 20px 20px 20px;
+    font-size: 250%;
+    font-style: italic;
+    line-height: 0.6;
+}
+
+#news a:link, #news a:visited {
+                  color: #000 !important;
+                  text-decoration: underline;
+              }
+
+#news .link-alt, #news a:hover span { display: none }
+
+#news a:hover .link-alt {
+    display: inline-block;
+    width: 10em;
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+section {
+    clear: both;
+}
+
+.space {
+    clear: both;
+    margin-bottom: 1em;
+}
+
+.space:before {
+  content: "\00a0";
+}
+
+.row {
+    clear: both;
+}
+
+.col2 h2 {
+    margin-top: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    text-transform: lowercase;
+    margin: 0 0 1em 0;
+}
+
+table {
+    border-spacing: 0;
+}
+
+tr {
+    height: 1.5em;
+}
+
+th {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    padding-left: 20px;
+}
+
+abbr {
+    text-decoration: underline;
+    cursor: help;
+}
+
+input {
+    font-size: 14px;
+    font-family: 'Lekton',sans-serif;
+}
+
+input[type=text] {
+    width: 15em;
+    padding: 4px;
+}
+
+input[type=submit] {
+    width: 7.5em;
+    padding: 6px;
+    background-color: #141010;
+    color: #f8f6f6;
+    border: 0;
+}
+
+span.tag {
+    background-color: #646060;
+    color: #f8f6f6;
+    font-size: 12px;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+span.tag:hover {
+    cursor: pointer;
+    background: #f09;
+}
+
+.loading {
+    margin: 1em 0;
+}
+
+.anim, .anim2, .anim3, .anim4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.anim2 {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+.anim3 {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.anim4 {
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+
+@-webkit-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-500px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+
+@-webkit-keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-3000px); }
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-3000px); }
+}
+
+.scroll {
+    -webkit-animation-duration: 28s;
+    animation-duration: 28s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: scrollLeft;
+    animation-name: scrollLeft;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 900px) {
+    #news {
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 768px) {
+    #news {
+        font-size: 172%;
+        line-height: 0.8;
+    }
+}
+
+@media (max-width: 640px) {
+    #news {
+        font-size: 125%;
+        line-height: 1;
+    }
+    h1 {
+        font-size: 350%;
+    }
+    .section-bg h2 {
+        position: relative;
+        top: -60px;
+        left: 20px;
+        margin: 0 -20px;
+        font-family: 'Lekton', sans-serif;
+        font-style: italic;
+        font-size: 350%;
+        padding: 0 20px;
+        height: 60px;
+        line-height: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* #heatmap {
+        display: none;
+    } */
+    h1 {
+        font-size: 250%;
+    }
+    .section-bg h2 {
+        position: relative;
+        top: -60px;
+        left: 20px;
+        margin: 0 -20px;
+        font-family: 'Lekton', sans-serif;
+        font-style: italic;
+        font-size: 250%;
+        padding: 0 20px;
+        height: 60px;
+        line-height: 70px;
+    }
+    .topics .list {
+        font-size: 150%;
+    }
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .col2 {
+        margin-top: 1em;
+    }
+}
+
+@media (min-width: 769px) {
+    .col2 {
+        width: 45%;
+        float: left;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 1340px) {
+    header .limit {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1341px) {
+    .limit {
+        max-width: 1280px;
+        margin: auto;
+    }
+    #tandc {
+        padding-left: 50px;
+    }
+}
+
+/*!
+ *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('/fonts/fa/fontawesome-webfont.eot?v=4.4.0');
+    src: url('/fonts/fa/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('/fonts/fa/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('/fonts/fa/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('/fonts/fa/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('/fonts/fa/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+.fa-2x {
+    font-size: 2em;
+}
+.fa-3x {
+    font-size: 3em;
+}
+.fa-4x {
+    font-size: 4em;
+}
+.fa-5x {
+    font-size: 5em;
+}
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.fa-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+.fa-ul > li {
+    position: relative;
+}
+.fa-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+}
+.fa-li.fa-lg {
+    left: -1.85714286em;
+}
+.fa-border {
+    padding: .2em .25em .15em;
+    border: solid 0.08em #eeeeee;
+    border-radius: .1em;
+}
+.fa-pull-left {
+    float: left;
+}
+.fa-pull-right {
+    float: right;
+}
+.fa.fa-pull-left {
+    margin-right: .3em;
+}
+.fa.fa-pull-right {
+    margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+.fa.pull-left {
+    margin-right: .3em;
+}
+.fa.pull-right {
+    margin-left: .3em;
+}
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+}
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.fa-rotate-90 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.fa-rotate-180 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.fa-rotate-270 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.fa-flip-horizontal {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.fa-flip-vertical {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+    filter: none;
+}
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+.fa-stack-1x,
+.fa-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.fa-stack-1x {
+    line-height: inherit;
+}
+.fa-stack-2x {
+    font-size: 2em;
+}
+.fa-inverse {
+    color: #ffffff;
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-github:before {
+    content: "\f09b";
+}
+.fa-spinner:before {
+    content: "\f110";
+}
+.fa-caret-up:before {
+  content: "\f0d8";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-cc-visa:before {
+  content: "\f1f0";
+}
+.fa-cc-mastercard:before {
+  content: "\f1f1";
+}
+.fa-cc-amex:before {
+  content: "\f1f3";
+}
+.fa-cc-paypal:before {
+  content: "\f1f4";
+}
