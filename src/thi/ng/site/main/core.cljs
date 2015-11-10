@@ -49,11 +49,11 @@
               :bg-pos  "50% 0%"
               :desc    "DOM generation, manipulation, async event bus and browser utilities"}
    :dstruct  {:name    "thi.ng/dstruct"
-              :version "0.1.1"
+              :version "0.1.2"
               :stars   1
               :lit     true
-              :loc     473
-              :tags    ["graph" "collections" "binary" "clojure" "clojurescript"]
+              :loc     960
+              :tags    ["graph" "collections" "binary" "streams" "clojure" "clojurescript"]
               :bg-uri  "dstruct/hero.jpg"
               :bg-pos  "50% 35%"
               :desc    "Data structures & utilities: Disjoint sets, Interval Trees, collection helpers, binary data I/O"}
@@ -67,10 +67,10 @@
               :bg-pos  "50% 60%"
               :desc    "Audio frequency analysis & visualization"}
    :geom     {:name    "thi.ng/geom"
-              :version "0.0.881"
+              :version "0.0.908"
               :stars   182
               :lit     true
-              :loc     13926
+              :loc     14784
               :tags    ["2d" "3d" "math" "analysis" "animation" "fabrication" "dataviz" "generative" "mesh" "svg" "matrix" "physics" "voxel" "webgl" "clojure" "clojurescript"]
               :bg-uri  "geom/hero.jpg"
               :bg-pos  "50% 0%"
@@ -133,10 +133,10 @@
               :stars   3
               :lit     true
               :loc     906
-              :tags    ["interpolation" "math" "macros" "binary" "interop" "clojure" "clojurescript"]
+              :tags    ["interpolation" "math" "macros" "noise" "binary" "interop" "clojure" "clojurescript"]
               :bg-uri  "math/hero.jpg"
               :bg-pos  "50% 80%"
-              :desc    "Useful math ops, bit manipulation, macro definitions to simplify complex equations"}
+              :desc    "Useful math ops, noise functions, bit manipulation and macro definitions to simplify complex equations"}
    :morpho   {:name    "thi.ng/morphogen"
               :version "0.1.1"
               :stars   74
