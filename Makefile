@@ -30,6 +30,7 @@ $(MAIN)/index.html: $(RES)/index.html
 	@echo "compressing html..."
 	@mkdir -p $(MAIN)
 	@htmlcompressor $(HTML_OPTS) -o $(MAIN)/index.html $(RES)/index.html
+	@cat $(MAIN)/index.html | sed -e "s/app.js/app.js?`date +%s`/" | sed -e "s/style.css/style.css?`date +%s`/" > $(MAIN)/index.html
 
 $(MAIN)/css/style.css: $(RES)/css/style.css
 	@echo "compressing css..."
@@ -68,6 +69,7 @@ $(WS)/index.html: $(RES)/workshop.html
 	@echo "compressing html..."
 	@mkdir -p $(WS)
 	@htmlcompressor $(HTML_OPTS) -o $(WS)/index.html $(RES)/workshop.html
+	@cat $(WS)/index.html | sed -e "s/app.js/app.js?`date +%s`/" | sed -e "s/workshop.css/workshop.css?`date +%s`/" > $(WS)/index.html
 
 $(WS)/css/workshop.css: $(RES)/css/workshop.css
 	@echo "compressing css..."
