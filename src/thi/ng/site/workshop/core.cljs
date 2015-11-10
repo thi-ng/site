@@ -17,6 +17,7 @@
     :capacity 8
     :id       "WS-LDN-2"
     :price    "£575.00 (+ 20% VAT in UK only)"
+    :soldout  true
     :topics   ["Advanced Clojure / Clojurescript concepts" "Macros" "DSL" "Channel based concurrency (CSP)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive visualization" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "SVG" "WebGL toolchain" "Realtime animation"]
     :shopify  {:store    "thi-ng-store.myshopify.com"
                :product  "Data visualization with Clojure, Clojurescript &amp; thi.ng (Level 2)"
@@ -71,7 +72,8 @@
                 {:width "100%" :height "450" :scrolling "no" :frameBorder "no"
                  :src "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/159061174&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"}]]
     :desc     [:div
-               "This workshop is NOT related to Clojure and instead will introduce you to the exciting world of programming embedded devices outside the world of Arduino, working 'bare-metal' with the powerful ARM Cortex processor family, which too is used in many smart phones. We will use the STM32F401 discovery board (included in workshop fee) featuring an 84MHz 32bit CPU w/ FPU, 256KB ROM, 64KB RAM, 2x USB, 3-axis accelerometer & gyroscope, 44.1kHz audio codec & microphone, and learn how to implement our own polyphonic & stereo MIDI synthesizer and sequencer, which you can take home later."
+               "This workshop is NOT related to Clojure and instead will introduce you to the exciting world of programming embedded devices outside the world of Arduino, working 'bare-metal' with the much more powerful ARM Cortex processor family, which too is used in many smart phones and other embedded & wearable devices."
+               [:p " We will use the low-cost STM32F401 discovery board (included in workshop fee) featuring an 84MHz 32bit CPU w/ FPU, 256KB ROM, 64KB RAM, 2x USB, 3-axis accelerometer & gyroscope, 44.1kHz audio codec & microphone, and learn how to implement our own polyphonic & stereo MIDI synthesizer and sequencer, which you can take home later. This is not just going to be a lo-fi noise box!"]
                [:p "Commented source code scaffolding will be provided to maximize time for experimentation."]
                [:h3 "Scheduled topics"]
                [:ul
@@ -79,23 +81,22 @@
                 [:li "Open source toolchain setup (Eclipse, GCC, OpenOCD, ST-Link)"]
                 [:li "Overview/review of important C language concepts"]
                 [:li "Basic examples (clock config, timers, GPIO, 8x LED, gyroscope)"]
-                [:li "Multitasking using interrupts"]
+                [:li "Overview of multi-tasking via interrupts"]
                 [:li "Digital audio introduction, theory & experimentation"]
                 [:li "Intro to USB device classes & file systems (play/record WAV files)"]
                 [:li "Synthesizer DSP graph overview, audio/music theory, experimentation"]
-                [:li "Introduction to MIDI & integrating with synthesizer"]
-                [:li "Generative music composition techniques"]
+                [:li "Introduction to MIDI & integrating with synthesizer / sequencer"]
+                [:li "Generative music composition techniques (scales, cellular automata etc.)"]
                 [:li "Project development / making music"]]
                [:h3 "Requirements"]
-               [:p "This workshop is going to be fast paced, but intended for beginners to embedded development. Previous programming experience in Arduino/C or Processing/Java/Python etc. is desired."]
+               [:p "This workshop is going to be fast paced, but intended for beginners to embedded development. Previous programming experience in Arduino/C/C++ or Processing/Java/Python etc. is desired."]
                [:p "All participants need to bring the following items:"]
                [:ul
                 [:li "OSX / Linux / Windows7+ laptop"]
                 [:li "Headphones"]
                 [:li "USB Memory stick (MS-DOS formatted)"]
                 [:li "USB OTG cable"]
-                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]
-               ]}])
+                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]]}])
 
 (def prev-workshops
   [{:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
@@ -144,13 +145,14 @@
         [:tr [:th "Capacity:"] [:td (:capacity ws) " participants"]]
         [:tr [:th "\u00a0"] [:td]]
         [:tr [:th "Price:"] [:td [:strong (:price ws)]]]
-        (when-let [disc (-> ws :shopify :discount)]
-          [:tr
-           [:th "Discount:"]
-           [:td.discount
-            (:percent disc) " off for first " (:num disc) " participants"
-            [:br] "Checkout code: " [:strong (:id disc)]]])
-        [:tr [:th] [:td [shopify-button (:shopify ws)]]]]]
+        (when-not (:soldout ws)
+          (when-let [disc (-> ws :shopify :discount)]
+            [:tr
+             [:th "Discount:"]
+             [:td.discount
+              (:percent disc) " off for first " (:num disc) " participants"
+              [:br] "Checkout code: " [:strong (:id disc)]]]))
+        [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] [shopify-button (:shopify ws)])]]]]
       (:extras ws)]
      [:div.col2 (:desc ws)]]
     [:div.space]]
