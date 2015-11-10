@@ -142,6 +142,10 @@ footer a:link, footer a:hover, footer a:visited {
     color: #f09;
 }
 
+.ws-hero {
+    width: 100%;
+}
+
 #tandc {
     margin: 0 -20px;
     background-color: #646060;
@@ -223,6 +227,7 @@ th {
 
 td {
     padding-left: 20px;
+    vertical-align: top;
 }
 
 abbr {

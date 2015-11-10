@@ -10,56 +10,12 @@
    [re-frame.core :refer [subscribe dispatch dispatch-sync]]))
 
 (def workshops
-  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
-    :date     "2 - 4 November 2015"
-    :loc      "London, venue TBC"
-    :audience "Beginner, intermediate Clojure knowledge"
-    :capacity 10
-    :price    "£575.00 (+ 20% VAT in UK only)"
-    :topics   ["Clojure / Clojurescript core concepts" "Workflow & toolchain options" "Collections & sequences" "Data transformations w/ transducers" "Concurrency basics" "Protocols" "Data visualization techniques & charting" "CSV & JSON I/O" "2D/3D geometry generation & manipulation" "SVG generation" "Render exports" "Offline animation"]
-    :shopify  {:store    "thi-ng-store.myshopify.com"
-               :product  "Data visualization with Clojure, Clojurescript &amp; thi.ng (Level 1)"
-               :handle   "data-visualization-with-clojure-clojurescript-thi-ng-level-1"
-               :cart     "6860514181:1"
-               :discount {:id "EARLY-LDN-1" :percent "15%" :num 5}}
-    :desc     [:div
-               "This workshop is aimed at people interested in using Clojure both in & outside the browser and learn how to deal with important aspects of producing, readable, considered visual representations of complex data."
-               [:p
-                "Over the course of the workshop we will develop a small project from scratch, producing a number of data visualizations in different formats and touch on all the important concepts to realise this mission:"]
-               [:h3 "Scheduled topics"]
-               [:ul
-                [:li "Clojure language concepts & syntax, basic macros"]
-                [:li "Clojure vs. Clojurescript comparison, planning split executions, trade-offs"]
-                [:li "Development environment/toolchain setup"]
-                [:li "Mutable and immutable data types, pros & cons"]
-                [:li "Sequence abstractions & processing, laziness"]
-                [:li "Representing structured data & custom types"]
-                [:li "Polymorphic functions & protocols"]
-                [:li "Composing processes using transducers"]
-                [:li "Working with libraries"]
-                [:li "Working with external data sources (GitHub, Twitter, data.gov.uk etc.)"]
-                [:li "Parsing & serializing data (CSV, EDN, JSON, XML, RDF etc.)"]
-                [:li "Transforming datasets into geometry"]
-                [:li "Fundamental 2D/3D vector algebra (spaces, vectors, matrices, quaternions)"]
-                [:li "Shape representation, manipulation & refinement"]
-                [:li "Coordinate system transformations, axises, mapping, 2D -> 3D transforms"]
-                [:li "Working with color (theory, color spaces, perception, cultural semantics)"]
-                [:li "Using the thi.ng/geom visualization package"]
-                [:li "Generating 2D/3D SVG outputs in Clojure & Clojurescript"]
-                [:li "Layering information, shared axes, using size and/or colors"]
-                [:li "Exporting 3D geometry/meshes (e.g. for 3D printing)"]
-                [:li "Timebased data & interpolation"]
-                [:li "Generating animated assets for post-production"]
-                [:li "Rendering 3D data in high-def w/ open source Luxrender"]
-                [:li "Last, but not least: Have fun!"]]
-               [:h3 "Requirements"]
-               [:p "Basic programming knowledge is expected, Clojure knowledge is optional."]]}
-
-   {:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
+  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
     :date     "11-13 November 2015"
-    :loc      "London, venue TBC"
+    :loc      "Muswell Hill, North London"
     :audience "Intermediate Clojure knowledge"
-    :capacity 10
+    :capacity 8
+    :id       "WS-LDN-2"
     :price    "£575.00 (+ 20% VAT in UK only)"
     :topics   ["Advanced Clojure / Clojurescript concepts" "Macros" "DSL" "Channel based concurrency (CSP)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive visualization" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "SVG" "WebGL toolchain" "Realtime animation"]
     :shopify  {:store    "thi-ng-store.myshopify.com"
@@ -95,11 +51,63 @@
                 [:li "Visualizing data in SVG & WebGL"]
                 [:li "Composing WebGL shaders from re-usable fragments"]]
                [:h3 "Requirements"]
-               [:p "Intermediate Clojure knowledge is required in the interest of the whole group."]]}])
+               [:p "Intermediate Clojure knowledge is required in the interest of the whole group."]]}
+   {:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
+    :date     "5-6 December 2015"
+    :loc      "Muswell Hill, North London"
+    :audience "Beginner/intermediate embedded device programming"
+    :capacity 6
+    :id       "WS-LDN-3"
+    :price    "£350.00 (+ 20% VAT in UK only), incl. STM32F40x discovery board"
+    :topics   ["ARM Cortex-M overview" "Embeded C programming with Eclipse & GCC toolchain" "Debugging" "STM Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
+    :shopify  {:store    "thi-ng-store.myshopify.com"
+               :product  "DIY Synth: Getting started with bare-metal ARM programming"
+               :handle   "diy-synth-getting-started-with-bare-metal-arm-programming"
+               :cart     "7746648005:1"
+               :discount {:id "EARLY-LDN-3" :percent "15%" :num 3}}
+    :extras   [:div
+               [:p "Work-in-progress sound samples: " [:a {:href "https://soundcloud.com/forthcharlie/sets/stm32f4"} "soundcloud.com/forthcharlie/sets/stm32f4"]]
+               [:iframe
+                {:width "100%" :height "450" :scrolling "no" :frameBorder "no"
+                 :src "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/159061174&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"}]]
+    :desc     [:div
+               "This workshop is NOT related to Clojure and instead will introduce you to the exciting world of programming embedded devices outside the world of Arduino, working 'bare-metal' with the powerful ARM Cortex processor family, which too is used in many smart phones. We will use the STM32F401 discovery board (included in workshop fee) featuring an 84MHz 32bit CPU w/ FPU, 256KB ROM, 64KB RAM, 2x USB, 3-axis accelerometer & gyroscope, 44.1kHz audio codec & microphone, and learn how to implement our own polyphonic & stereo MIDI synthesizer and sequencer, which you can take home later."
+               [:p "Commented source code scaffolding will be provided to maximize time for experimentation."]
+               [:h3 "Scheduled topics"]
+               [:ul
+                [:li "Introduction to ARM CPU family and the STM32 development board"]
+                [:li "Open source toolchain setup (Eclipse, GCC, OpenOCD, ST-Link)"]
+                [:li "Overview/review of important C language concepts"]
+                [:li "Basic examples (clock config, timers, GPIO, 8x LED, gyroscope)"]
+                [:li "Multitasking using interrupts"]
+                [:li "Digital audio introduction, theory & experimentation"]
+                [:li "Intro to USB device classes & file systems (play/record WAV files)"]
+                [:li "Synthesizer DSP graph overview, audio/music theory, experimentation"]
+                [:li "Introduction to MIDI & integrating with synthesizer"]
+                [:li "Generative music composition techniques"]
+                [:li "Project development / making music"]]
+               [:h3 "Requirements"]
+               [:p "This workshop is going to be fast paced, but intended for beginners to embedded development. Previous programming experience in Arduino/C or Processing/Java/Python etc. is desired."]
+               [:p "All participants need to bring the following items:"]
+               [:ul
+                [:li "OSX / Linux / Windows7+ laptop"]
+                [:li "Headphones"]
+                [:li "USB Memory stick (MS-DOS formatted)"]
+                [:li "USB OTG cable"]
+                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]
+               ]}])
 
-(defn on-js-reload []
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-  )
+(def prev-workshops
+  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
+    :date     "2-4 November 2015"
+    :url      "https://github.com/thi-ng/ws-ldn-1/"
+    :id       "WS-LDN-1"
+    :loc      "London"
+    :audience "Beginner, intermediate Clojure knowledge"
+    :topics   ["Clojure / Clojurescript core concepts" "Workflow & toolchain options" "Collections & sequences" "Data transformations w/ transducers" "Protocols" "Data visualization techniques, mapping & charting" "CSV parsing & transformation" "2D/3D geometry generation & manipulation" "SVG generation / mapping" "React.js / Reagent examples" "WebGL basics"]}])
+
+(defn on-js-reload
+  [])
 
 (defn shopify-button
   [bt]
@@ -123,7 +131,7 @@
 
 (defn workshop-section
   [i ws]
-  [:section
+  [:section {:key (str "ws" i) :id (:id ws)}
    [:div.limit
     [:h2.title (:title ws)]
     [:div.row
@@ -142,31 +150,59 @@
            [:td.discount
             (:percent disc) " off for first " (:num disc) " participants"
             [:br] "Checkout code: " [:strong (:id disc)]]])
-        [:tr [:th] [:td [shopify-button (:shopify ws)]]]]]]
+        [:tr [:th] [:td [shopify-button (:shopify ws)]]]]]
+      (:extras ws)]
      [:div.col2 (:desc ws)]]
     [:div.space]]
    [:div.topics
     [:div.limit.list (str/join " | " (:topics ws))]]
    [:div.space]])
 
-(defn main-panel
-  []
+(defn current-workshops
+  [workshops]
   [:div
    [:div.limit
     [:h1 "Upcoming workshops"]
     "The schedules for each workshop state the topics aimed and prepared for. They're realistic estimates based on similar workshops taught in the past. However, each workshop group is individual and unpredictable until the event and so please consider these as a roadmap, which of course we will try to follow as closely as possible!"]
-   (map-indexed
-    (fn [i p] (with-meta [workshop-section i p] {:key (str "ws" i)}))
-    workshops)
+   (map-indexed workshop-section workshops)])
+
+(defn workshop-summary
+  [i ws]
+  [:section {:key (str "ws-summary" i)}
    [:div.limit
-    [:h1#teacher "Teacher"]
+    [:h2.title (:title ws)]
     [:div.row
      [:div.col2
-      [:img {:src "/img/workshop/toxi.jpg" :alt "Karsten Schmidt portrait"}]
-      [:br "Photo by " [:a {:href "http://manomine.net"} "Manomine"]]]
+      [:table
+       [:tbody
+        [:tr [:th "Date:"] [:td (:date ws)]]
+        [:tr [:th "Location:"] [:td (:loc ws)]]
+        [:tr [:th "Audience:"] [:td (:audience ws)]]
+        [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} (:url ws)]]]]]]
      [:div.col2
-      [:h2 "Karsten Schmidt"]
-      [:p "Karsten is an award-winning London based computational
+      [:ul
+       (map-indexed (fn [ii t] [:li {:key (str "wsum" i "-" ii)} t]) (:topics ws))]]]
+    [:div.space]]])
+
+(defn previous-workshops
+  [workshops]
+  [:div
+   [:div.limit
+    [:h1 "Previous workshops"]
+    "You can find details of past workshops below. For each workshop, all key exercises are recorded in a public Github repository for future reference:"]
+   (map-indexed workshop-summary workshops)])
+
+(defn bio-component
+  []
+  [:div.limit
+   [:h1#teacher "Teacher"]
+   [:div.row
+    [:div.col2
+     [:img {:src "/img/workshop/toxi.jpg" :alt "Karsten Schmidt portrait"}]
+     [:br "Photo by " [:a {:href "http://manomine.net"} "Manomine"]]]
+    [:div.col2
+     [:h2 "Karsten Schmidt"]
+     [:p "Karsten is an award-winning London based computational
 designer and researcher merging code, design, art & craft skills.
 Originally from East Germany and starting in the deep end of the early
 8-bit demo scene (6502 assembly), for the past 27+ years he’s been
@@ -178,12 +214,12 @@ and education and has been applying this mixture hands-on to a variety
 of fields: from ARM assembly & embedded programming to architecture,
 branding, generative design, data visualization, digital fabrication,
 games, interactive installations, motion graphics & music."]
-      [:p "Karsten has been using Clojure daily since 2011, after
+     [:p "Karsten has been using Clojure daily since 2011, after
 working with Java for 15 years. Since 2009 he's been teaching, (often
 highly intensive) creative coding workshops internationally at various
 universities, incl. ETH Zurich, CIID Copenhagen, UID Umeå, Bezalel
 Academy Jerusalem, HEAD Geneva, UCP Porto."]
-      [:p "When not creating, he regularly travels the world
+     [:p "When not creating, he regularly travels the world
 consulting, lecturing and teaching workshops about coding, open source
 and employing code as creative tool. He is a prolific contributor (and
 founder) of several large open source projects, was an early
@@ -192,43 +228,54 @@ programming and digital design. His work has been featured and
 exhibited internationally, including MoMA & Whitney New York, London
 Design Museum, Barbican Centre. His work is part of the Victoria &
 Albert Museum's permanent collection."]]]
-    [:div.space]]
-   [:div#tandc
-    [:div.row.limit
-     [:h1 "Terms & Conditions"]
-     [:h2 "Cancellation"]
-     "Tickets are refundable under the following conditions:"
-     [:ul
-      [:li "100% refund, if cancelled within 5 days of booking"]
-      [:li "50% refund, if cancelled between 6-10 days of booking"]
-      [:li [:strong "No refund, if cancelled after 10 days since booking"]]]
-     "Of course, you're entitled to a full refund should a workshop be cancelled by the teacher."
-     [:h2 "Venue details"]
-     "Participants will be notified of the venue address and travel options at least 1 week prior to each workshop."
-     [:h2 "Daily schedule & sustenance"]
-     [:p "All workshops run from 10am - 5.30pm, incl. 1h lunch break and short coffee breaks (5 mins) every 2 hours (based on group decisions on the day)."]
-     [:p "Food & drinks will be supplied (incl. in workshop fee). Any special dietary requirements must be notified at least 48h before the workshop start."]
-     [:h2 "Materials"]
-     [:p "All participants are required to bring their own laptop (OSX, Linux or Windows 7+). UK power points will be supplied."]
-     [:p "All examples, exercises and other digital materials created during the workshop will be shared with participants at the end of the workshop."]
-     [:h2 "Payments"]
-     [:p "All payment processing is handled securely by " [:a {:href "http://shopify.com"} "Shopify"] "."]
-     [:p "Accepted payment methods:"]
-     [:span.fa-2x
-      [:i.fa.fa-cc-visa] " "
-      [:i.fa.fa-cc-mastercard] " "
-      [:i.fa.fa-cc-amex] " "
-      [:i.fa.fa-cc-paypal]]]
-    [:div.row.limit
-     [:h1 "Contact"]
-     [:p
-      "Get in touch via "
-      [:a {:href (str "mailto:" "k" \@ "thi" \. "ng?subject" "=Workshop")} "email"]
-      ", "
-      [:a {:href "https://twitter.com/toxi"} "Twitter"]
-      " or "
-      [:a {:href "https://tinyletter.com/thi-ng"} "subscribe to the newsletter"] "."]]
-    [:div.space]]])
+   [:div.space]])
+
+(defn tandc-component
+  []
+  [:div#tandc
+   [:div.row.limit
+    [:h1 "Terms & Conditions"]
+    [:h2 "Cancellation"]
+    "Tickets are refundable under the following conditions:"
+    [:ul
+     [:li "100% refund, if cancelled within 5 days of booking"]
+     [:li "50% refund, if cancelled between 6-10 days of booking"]
+     [:li [:strong "No refund, if cancelled after 10 days since booking"]]]
+    "Of course, you're entitled to a full refund should a workshop be cancelled by the teacher."
+    [:h2 "Venue details"]
+    "Participants will be notified of the venue address and travel options at least 1 week prior to each workshop."
+    [:h2 "Daily schedule & sustenance"]
+    [:p "All workshops run from 10am - 5.30pm, incl. 1h lunch break and short coffee breaks (5 mins) every 2 hours (based on group decisions on the day)."]
+    [:p "Food & drinks will be supplied (incl. in workshop fee). Any special dietary requirements must be notified at least 48h before the workshop start."]
+    [:h2 "Materials"]
+    [:p "All participants are required to bring their own laptop (OSX, Linux or Windows 7+). UK power points will be supplied."]
+    [:p "All examples, exercises and other digital materials created during the workshop will be shared with participants at the end of the workshop."]
+    [:h2 "Payments"]
+    [:p "All payment processing is handled securely by " [:a {:href "http://shopify.com"} "Shopify"] "."]
+    [:p "Accepted payment methods:"]
+    [:span.fa-2x
+     [:i.fa.fa-cc-visa] " "
+     [:i.fa.fa-cc-mastercard] " "
+     [:i.fa.fa-cc-amex] " "
+     [:i.fa.fa-cc-paypal]]]
+   [:div.row.limit
+    [:h1 "Contact"]
+    [:p
+     "Get in touch via "
+     [:a {:href (str "mailto:" "k" \@ "thi" \. "ng?subject" "=Workshop")} "email"]
+     ", "
+     [:a {:href "https://twitter.com/toxi"} "Twitter"]
+     " or "
+     [:a {:href "https://tinyletter.com/thi-ng"} "subscribe to the newsletter"] "."]]
+   [:div.space]])
+
+(defn main-panel
+  []
+  [:div
+   [current-workshops workshops]
+   [previous-workshops prev-workshops]
+   [bio-component]
+   [tandc-component]])
 
 (defn main
   []
