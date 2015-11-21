@@ -10,52 +10,9 @@
    [re-frame.core :refer [subscribe dispatch dispatch-sync]]))
 
 (def workshops
-  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
-    :date     "11-13 November 2015"
-    :loc      "Muswell Hill, North London"
-    :audience "Intermediate Clojure knowledge"
-    :capacity 8
-    :id       "WS-LDN-2"
-    :price    "£575.00 (+ 20% VAT in UK only)"
-    :soldout  true
-    :topics   ["Advanced Clojure / Clojurescript concepts" "Macros" "DSL" "Channel based concurrency (CSP)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive visualization" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "SVG" "WebGL toolchain" "Realtime animation"]
-    :shopify  {:store    "thi-ng-store.myshopify.com"
-               :product  "Data visualization with Clojure, Clojurescript &amp; thi.ng (Level 2)"
-               :handle   "data-visualization-with-clojure-clojurescript-thi-ng-level-2"
-               :cart     "6860600709:1"
-               :discount {:id "EARLY-LDN-2" :percent "15%" :num 5}}
-    :desc     [:div
-               "In this workshop we will deal with more complex data and build an interactive, responsive, browser based visualization app using " [:a {:href "http://linkeddata.org/"} "Linked data"] ". This task will involve creating a simple server backend and our frontend will be built as " [:a {:href "http://en.wikipedia.org/wiki/Single-page_application"} "Single-page application"] " using WebGL, Reagent, a Clojurescript wrapper around React.js."
-               [:h3 "Scheduled topics"]
-               [:ul
-                [:li "Brief review of Clojure concepts"]
-                [:li "Processing data in parallel and/or concurrently (promises, delays, futures, agents)"]
-                [:li "Organizing code around core.async channels"]
-                [:li "Brief graph theory & representations in code form"]
-                [:li "Introduction to " [:a {:href "http://thi.ng/fabric"} "thi.ng/fabric"] " compute graph"]
-                [:li "Using graphs as caching network to compute data efficiently"]
-                [:li "Linked Data (LD) introduction & " [:a {:href "http://lov.okfn.org/dataset/lov"} "common vocabularies"]]
-                [:li "Mapping CSV data to graphs using LD vocabularies"]
-                [:li "Defining macros to simplify boilerplate & create a " [:abbr {:title "Domain Specific Language"} "DSL"]]
-                [:li "Importing & querying Linked Data sets/graphs using a DSL"]
-                [:li "Using Graphviz to debug queries & LD datasets"]
-                [:li "Introduction to component driven workflow"]
-                [:li "Setting up a simple LD server (using components)"]
-                [:li "Building a UI with "
-                 [:a {:href "https://github.com/bhauman/lein-figwheel"} "Figwheel"] ", "
-                 [:a {:href "http://reagent-project.github.io"} "Reagent"] ", "
-                 [:a {:href "https://github.com/Day8/re-frame/"} "Re-frame"] " (and " [:a {:href ""} "React.js"] ")"]
-                [:li "Representing & transforming DOM fragments in Clojure(script)"]
-                [:li "Event handling & event busses using core.async"]
-                [:li "Routing UI state changes to view components, adding responsive features"]
-                [:li "WebGL introduction, Clojurescript examples"]
-                [:li "Visualizing data in SVG & WebGL"]
-                [:li "Composing WebGL shaders from re-usable fragments"]]
-               [:h3 "Requirements"]
-               [:p "Intermediate Clojure knowledge is required in the interest of the whole group."]]}
-   {:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
+  [{:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
     :date     "5-6 December 2015"
-    :loc      "Muswell Hill, North London"
+    :loc      "North London"
     :audience "Beginner/intermediate embedded device programming"
     :capacity 6
     :id       "WS-LDN-3"
@@ -99,7 +56,14 @@
                 [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]]}])
 
 (def prev-workshops
-  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
+  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
+    :date     "11-13 November 2015"
+    :url      "https://github.com/thi-ng/ws-ldn-2/"
+    :id       "WS-LDN-2"
+    :loc      "London"
+    :audience "Intermediate Clojure knowledge"
+    :topics   ["Advanced Clojure / Clojurescript concepts" "Channel based concurrency (CSP / core.async)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive SVG heatmaps" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Query visualization"]}
+   {:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
     :date     "2-4 November 2015"
     :url      "https://github.com/thi-ng/ws-ldn-1/"
     :id       "WS-LDN-1"
@@ -180,7 +144,7 @@
         [:tr [:th "Date:"] [:td (:date ws)]]
         [:tr [:th "Location:"] [:td (:loc ws)]]
         [:tr [:th "Audience:"] [:td (:audience ws)]]
-        [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} (:url ws)]]]]]]
+        [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} "Github repo"]]]]]]
      [:div.col2
       [:ul
        (map-indexed (fn [ii t] [:li {:key (str "wsum" i "-" ii)} t]) (:topics ws))]]]
