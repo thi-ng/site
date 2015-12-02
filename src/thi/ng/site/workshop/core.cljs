@@ -16,13 +16,13 @@
     :audience "Beginner/intermediate embedded device programming"
     :capacity 6
     :id       "WS-LDN-3"
-    :price    "£350.00 (+ 20% VAT in UK only), incl. STM32F40x discovery board"
+    :price    "£200.00 (+ 20% VAT in UK only), incl. STM32F401 discovery board"
     :topics   ["ARM Cortex-M overview" "Embeded C programming with Eclipse & GCC toolchain" "Debugging" "STM Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
     :shopify  {:store    "thi-ng-store.myshopify.com"
                :product  "DIY Synth: Getting started with bare-metal ARM programming"
                :handle   "diy-synth-getting-started-with-bare-metal-arm-programming"
                :cart     "7746648005:1"
-               :discount {:id "EARLY-LDN-3" :percent "15%" :num 3}}
+               :discount nil #_{:id "WS-LDN-3-LATE" :percent "50%"}}
     :extras   [:div
                [:p "Work-in-progress sound samples: " [:a {:href "https://soundcloud.com/forthcharlie/sets/stm32f4"} "soundcloud.com/forthcharlie/sets/stm32f4"]]
                [:iframe
@@ -114,7 +114,7 @@
             [:tr
              [:th "Discount:"]
              [:td.discount
-              (:percent disc) " off for first " (:num disc) " participants"
+              (:percent disc) " off" (if-let [n (:num disc)] (str " for first " num " participants"))
               [:br] "Checkout code: " [:strong (:id disc)]]]))
         [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] [shopify-button (:shopify ws)])]]]]
       (:extras ws)]
