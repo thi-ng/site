@@ -10,59 +10,79 @@
    [re-frame.core :refer [subscribe dispatch dispatch-sync]]))
 
 (def workshops
-  [{:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
-    :date     "5-6 December 2015"
+  [{:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming"
+    :date     "23 - 24 January 2016"
     :loc      "North London"
     :audience "Beginner/intermediate embedded device programming"
-    :capacity 6
-    :id       "WS-LDN-3"
-    :price    "£200.00 (+ 20% VAT in UK only), incl. STM32F401 discovery board"
-    :topics   ["ARM Cortex-M overview" "Embeded C programming with Eclipse & GCC toolchain" "Debugging" "STM Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
+    :capacity 7
+    :id       "WS-LDN-4"
+    :price    (list "£320.00 (+ 20% VAT in UK only)," [:br] "(includes STM32F746G discovery board, £40)")
+    :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Interactive touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]
     :shopify  {:store    "thi-ng-store.myshopify.com"
-               :product  "DIY Synth: Getting started with bare-metal ARM programming"
-               :handle   "diy-synth-getting-started-with-bare-metal-arm-programming"
-               :cart     "7746648005:1"
-               :discount nil #_{:id "WS-LDN-3-LATE" :percent "50%"}}
+               :product  "Interactive DIY Synth &amp; embedded GUIs: Getting started with ARM programming"
+               :handle   "interactive-diy-synth-embedded-guis-getting-started-with-arm-programming"
+               :cart     "9775120325:1"
+               :discount {:id "WS-LDN-4-EARLY" :num 3 :percent "25%"}}
     :extras   [:div
+               [:p [:img {:src "/img/workshop/stm32f7-disco.jpg" :alt "STM32F746-DISCO board" :width "100%"}]]
+               [:p "We'll be using the STM32F746 discovery board, featuring a 200MHz Cortex-M7 CPU, 1MB Flash, 340KB RAM, 4.3\" LCD touchscreen, 2x USB, 44.1kHz audio, 2x microphone, microSD card, Ethernet"]
                [:p "Work-in-progress sound samples: " [:a {:href "https://soundcloud.com/forthcharlie/sets/stm32f4"} "soundcloud.com/forthcharlie/sets/stm32f4"]]
                [:iframe
                 {:width "100%" :height "450" :scrolling "no" :frameBorder "no"
                  :src "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/159061174&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"}]]
     :desc     [:div
-               "This workshop is NOT related to Clojure and instead will introduce you to the exciting world of programming embedded devices outside the world of Arduino, working 'bare-metal' with the much more powerful ARM Cortex processor family, which too is used in many smart phones and other embedded & wearable devices."
-               [:p " We will use the low-cost STM32F401 discovery board (included in workshop fee) featuring an 84MHz 32bit CPU w/ FPU, 256KB ROM, 64KB RAM, 2x USB, 3-axis accelerometer & gyroscope, 44.1kHz audio codec & microphone, and learn how to implement our own polyphonic & stereo MIDI synthesizer and sequencer, which you can take home later. This is not just going to be a lo-fi noise box!"]
+               "This workshop is NOT related to Clojure and instead will introduce you to the exciting world of programming embedded devices outside the world of Arduino, working 'bare-metal' with the much more powerful ARM Cortex processor family."
+               [:p " We will use the " [:a {:href "http://www.st.com/web/en/catalog/tools/FM116/SC959/SS1532/LN1848/PF261641"} "STM32F746 discovery board"] " (included in workshop fee) and " [:strong "learn how to create a fully featured application: Our own polyphonic stereo MIDI synthesizer, sequencer with an interactive touchscreen GUI to control the instrument"] " - all of which you can take home later. This is not just going to be a lo-fi noise box!"]
                [:p "Commented source code scaffolding will be provided to maximize time for experimentation."]
                [:h3 "Scheduled topics"]
                [:ul
                 [:li "Introduction to ARM CPU family and the STM32 development board"]
                 [:li "Open source toolchain setup (Eclipse, GCC, OpenOCD, ST-Link)"]
                 [:li "Overview/review of important C language concepts"]
-                [:li "Basic examples (clock config, timers, GPIO, 8x LED, gyroscope)"]
+                [:li "Basic examples (clock config, timers, GPIO, 8x LED, LCD display)"]
                 [:li "Overview of multi-tasking via interrupts"]
                 [:li "Digital audio introduction, theory & experimentation"]
                 [:li "Intro to USB device classes & file systems (play/record WAV files)"]
                 [:li "Synthesizer DSP graph overview, audio/music theory, experimentation"]
                 [:li "Introduction to MIDI & integrating with synthesizer / sequencer"]
                 [:li "Generative music composition techniques (scales, cellular automata etc.)"]
+                [:li "Manipulate the synth via touchscreen GUI controls"]
                 [:li "Project development / making music"]]
                [:h3 "Requirements"]
-               [:p "This workshop is going to be fast paced, but intended for beginners to embedded development. Previous programming experience in Arduino/C/C++ or Processing/Java/Python etc. is desired."]
+               [:p "This workshop is going to be fast paced, but primarily intended for beginners to embedded development. Previous programming experience in Arduino/C/C++ or Processing/Java/Python etc. is desired, but coding will be kept to a minimum for time reasons"]
                [:p "All participants need to bring the following items:"]
                [:ul
                 [:li "OSX / Linux / Windows7+ laptop"]
                 [:li "Headphones"]
                 [:li "USB Memory stick (MS-DOS formatted)"]
                 [:li "USB OTG cable"]
-                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]]}])
+                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]]}
+   {:title    "Data visualization with Clojure(script) & thi.ng"
+    :date     "1st half of February 2016"
+    :id       "WS-LDN-5"
+    :loc      "Berlin Mitte"
+    :audience "Beginner/Intermediate Clojure knowledge"
+    :capacity "10-12"
+    :topics   ["Clojure / Clojurescript language concepts" "Concurrency" "Interactive SVG & WebGL visualization" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Graphs" "Linked Data basics & queries" "Async server setup & components"]
+    :desc     [:div "This workshop is still being finalized and full details will be announced ASAP. If you're interested in taking part, please " [:a {:href (str "mailto:" "k" \@ "thi" \. "ng?subject" "=Berlin+workshop")} "get in touch"] " and we will contact you directly."]}])
 
 (def prev-workshops
-  [{:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
+  [{:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
+    :date     "5-6 December 2015"
+    :url      "https://github.com/thi-ng/ws-ldn-3"
+    :id       "WS-LDN-3"
+    :loc      "North London"
+    :audience "Beginner/intermediate embedded device programming"
+    :topics   ["ARM Cortex-M overview" "Embedded C programming with Eclipse & GCC toolchain" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
+    :report   {:url "https://soundcloud.com/forthcharlie/sets/stm32f4" :title "Audio examples (Soundcloud)"}}
+   {:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
     :date     "11-13 November 2015"
     :url      "https://github.com/thi-ng/ws-ldn-2/"
     :id       "WS-LDN-2"
     :loc      "London"
     :audience "Intermediate Clojure knowledge"
-    :topics   ["Advanced Clojure / Clojurescript concepts" "Channel based concurrency (CSP / core.async)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive SVG heatmaps" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Query visualization"]}
+    :topics   ["Advanced Clojure / Clojurescript concepts" "Channel based concurrency (CSP / core.async)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive SVG heatmaps" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Query visualization"]
+    :report   {:url "https://medium.com/@thi.ng/workshop-report-building-linked-data-heatmaps-with-clojurescript-thi-ng-102e0581225c" :title "Workshop report (blog post)"}}
    {:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
     :date     "2-4 November 2015"
     :url      "https://github.com/thi-ng/ws-ldn-1/"
@@ -108,15 +128,17 @@
         [:tr [:th "Audience:"] [:td (:audience ws)]]
         [:tr [:th "Capacity:"] [:td (:capacity ws) " participants"]]
         [:tr [:th "\u00a0"] [:td]]
-        [:tr [:th "Price:"] [:td [:strong (:price ws)]]]
-        (when-not (:soldout ws)
-          (when-let [disc (-> ws :shopify :discount)]
-            [:tr
-             [:th "Discount:"]
-             [:td.discount
-              (:percent disc) " off" (if-let [n (:num disc)] (str " for first " num " participants"))
-              [:br] "Checkout code: " [:strong (:id disc)]]]))
-        [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] [shopify-button (:shopify ws)])]]]]
+        [:tr [:th "Price:"] [:td (if-let [p (:price ws)] [:strong (:price ws)] "TBC")]]
+        (when (or (:soldout ws) (:shopify ws))
+          (list
+           (when-not (:soldout ws)
+             (when-let [disc (-> ws :shopify :discount)]
+               [:tr
+                [:th "Discount:"]
+                [:td.discount
+                 (:percent disc) " off" (if-let [n (:num disc)] (str " for first " n " participants"))
+                 [:br] "Checkout code: " [:strong (:id disc)]]]))
+           [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] [shopify-button (:shopify ws)])]]))]]
       (:extras ws)]
      [:div.col2 (:desc ws)]]
     [:div.space]]
@@ -144,7 +166,9 @@
         [:tr [:th "Date:"] [:td (:date ws)]]
         [:tr [:th "Location:"] [:td (:loc ws)]]
         [:tr [:th "Audience:"] [:td (:audience ws)]]
-        [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} "Github repo"]]]]]]
+        [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} "Github repo"]]]
+        (when-let [rep (:report ws)]
+          [:tr [:th "Report:"] [:td [:a {:href (:url rep)} (:title rep)]]])]]]
      [:div.col2
       [:ul
        (map-indexed (fn [ii t] [:li {:key (str "wsum" i "-" ii)} t]) (:topics ws))]]]
