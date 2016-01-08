@@ -705,6 +705,9 @@ span.tag:hover {
 .fa-github:before {
     content: "\f09b";
 }
+.fa-medium:before {
+  content: "\f23a";
+}
 .fa-spinner:before {
   content: "\f110";
 }

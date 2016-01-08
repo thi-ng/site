@@ -10,7 +10,7 @@
    [re-frame.core :refer [subscribe dispatch dispatch-sync]]))
 
 (def workshops
-  [{:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming"
+  [{:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming (2 days)"
     :date     "23 - 24 January 2016"
     :loc      "North London"
     :audience "Beginner/intermediate embedded device programming"
@@ -57,14 +57,44 @@
                 [:li "USB Memory stick (MS-DOS formatted)"]
                 [:li "USB OTG cable"]
                 [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]]}
-   {:title    "Data visualization with Clojure(script) & thi.ng"
-    :date     "1st half of February 2016"
-    :id       "WS-LDN-5"
+   {:title    "thi.ng x Studio NAND - Clojure(script) data visualization workshop (3 days)"
+    :date     "17 - 19 February 2016"
+    :id       "WS-BLN-1"
     :loc      "Berlin Mitte"
-    :audience "Beginner/Intermediate Clojure knowledge"
-    :capacity "10-12"
-    :topics   ["Clojure / Clojurescript language concepts" "Concurrency" "Interactive SVG & WebGL visualization" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Graphs" "Linked Data basics & queries" "Async server setup & components"]
-    :desc     [:div "This workshop is still being finalized and full details will be announced ASAP. If you're interested in taking part, please " [:a {:href (str "mailto:" "k" \@ "thi" \. "ng?subject" "=Berlin+workshop")} "get in touch"] " and we will contact you directly."]}])
+    :audience "Intermediate Clojure knowledge"
+    :capacity 12
+    :price    "£445 professionals, £150 students (+ 20% VAT, UK only)"
+    :topics   ["Clojure / Clojurescript concepts" "Live coding workflow" "Interactive SVG & WebGL visualization" "Reactive SPA (using Reagent)" "Shape generation/manipulation" "Shader composition" "Linked Data basics & queries" "core.async dataflow graphs"]
+    :shopify  {:store    "thi-ng-store.myshopify.com"
+               :product  "thi.ng x Studio NAND - Clojure(script) workshop, Berlin"
+               :handle   "thi-ng-x-studionand-clojurescript-workshop-berlin"
+               :cart     "10035927621:1"
+               :capacity 8
+               :discount nil #_{:id "WS-BLN-1" :num 2 :percent "25%"}}
+    :extras   [:p "If you're a student, please first " [:a {:href "mailto:k@thi.ng?subject=WS-BLN-1 student discount"} "get in touch via email"] " before ordering. Valid student card is required to be eligble for discount. Only 2 student places available."]
+    :desc     [:div
+               "In this workshop, held in partnership with " [:a {:href "http://nand.io"} "Studio NAND"] ", we will focus on creating small 2D/3D visualizations in both Clojure & Clojurescript, i.e. with & without the browser (using " [:a {:href "http://electron.atom.io/"} "Elektron"] "). Using various projects from the thi.ng collection, this workshop will introduce you to many concepts, techniques related to Clojure, WebGL/GLSL, data modeling and dataflow, in a practical creative coding context:"
+               [:ul
+                [:li "Tooling & REPL-driven workflow alternatives"]
+                [:li "Overview of Clojure concepts (collections, higher-order functions, protocols, polymorphism, macros)"]
+                [:li "Overview of " [:a {:href "http://thi.ng/"} "thi.ng"] " projects used for workshop"]
+                [:li "Concurrency basics (promises, delays, futures, agents, atoms, refs)"]
+                [:li "Dataflow core.async introduction"]
+                [:li "Using graph data structures, theory, linked data & code representations"]
+                [:li "Importing & querying Linked Data sets/graphs using a DSL"]
+                [:li "Setting up a simple server (using components)"]
+                [:li "Building reactive UI with "
+                 [:a {:href "https://github.com/bhauman/lein-figwheel"} "Figwheel"] " and "
+                 [:a {:href "http://reagent-project.github.io"} "Reagent"]]
+                [:li "Representing & transforming DOM fragments in Clojure(script)"]
+                [:li "Geometry, vector algebra & WebGL introduction, Clojurescript examples"]
+                [:li "Shape & mesh generation / manipulation"]
+                [:li "Working with color spaces, mapping colors"]
+                [:li "Creating visualizations with SVG & WebGL"]
+                [:li "WebGL shaders, composing shaders from re-usable fragments"]
+                [:li "Event handling & event busses using core.async"]
+                [:li "Animating & interacting with a 3D scene"]
+                [:li "Using an Entity Component System for flexible state handling"]]]}])
 
 (def prev-workshops
   [{:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"

@@ -8,6 +8,7 @@ MAIN_SRC = $(SRC)/main
 
 WS = $(BUILD)/workshop
 WS_TARGET = s3://workshop.thi.ng/
+WS_STAGE = s3://workshop-staging.thi.ng/
 WS_SRC = $(SRC)/workshop
 
 HTML_OPTS = --remove-surrounding-spaces max
@@ -98,6 +99,10 @@ ws: ws-html ws-js ws-css ws-fonts ws-img
 install-ws: ws
 	@echo "syncing with: $(WS_TARGET)"
 	@s3cmd -P sync $(WS)/ $(WS_TARGET)
+
+stage-ws: ws
+	@echo "syncing with: $(WS_STAGE)"
+	@s3cmd -P sync $(WS)/ $(WS_STAGE)
 
 serve-ws:
 	@sleep 1 && open "http://localhost:8000/" &
