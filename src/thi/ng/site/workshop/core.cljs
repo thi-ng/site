@@ -15,6 +15,7 @@
     :loc      "North London"
     :audience "Beginner/intermediate embedded device programming"
     :capacity 7
+    :soldout  true
     :id       "WS-LDN-4"
     :price    (list "£320.00 (+ 20% VAT in UK only)," [:br] "(includes STM32F746G discovery board, £40)")
     :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Interactive touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]
@@ -56,7 +57,12 @@
                 [:li "Headphones"]
                 [:li "USB Memory stick (MS-DOS formatted)"]
                 [:li "USB OTG cable"]
-                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]]}
+                [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]
+               [:p "Included in workshop fee:"]
+               [:ul
+                [:li [:a {:href "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF261641"} "STM32F7-DISCOVERY development board"]]
+                [:li "Food & hot drinks"]]
+               [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}
    {:title    "thi.ng x Studio NAND - Clojure(script) data visualization workshop (3 days)"
     :date     "17 - 19 February 2016"
     :id       "WS-BLN-1"
@@ -94,7 +100,12 @@
                 [:li "WebGL shaders, composing shaders from re-usable fragments"]
                 [:li "Event handling & event busses using core.async"]
                 [:li "Animating & interacting with a 3D scene"]
-                [:li "Using an Entity Component System for flexible state handling"]]]}])
+                [:li "Using an Entity Component System for flexible state handling"]]
+               [:p "All participants need to bring the following items:"]
+               [:ul
+                [:li "OSX / Linux / Windows7+ laptop"]
+                [:li "Java JDK 7+ installed"]]
+               [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}])
 
 (def prev-workshops
   [{:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
@@ -266,7 +277,7 @@ Albert Museum's permanent collection."]]]
     "Participants will be notified of the venue address and travel options at least 1 week prior to each workshop."
     [:h2 "Daily schedule & sustenance"]
     [:p "All workshops run from 10am - 5.30pm, incl. 1h lunch break and short coffee breaks (5 mins) every 2 hours (based on group decisions on the day)."]
-    [:p "Food & drinks will be supplied (incl. in workshop fee). Any special dietary requirements must be notified at least 48h before the workshop start."]
+    [:p "If food & drinks are included in workshop fee (as per workshop description), you'll need to inform us of any special dietary requirements at least 48h before the workshop start."]
     [:h2 "Materials"]
     [:p "All participants are required to bring their own laptop (OSX, Linux or Windows 7+). UK power points will be supplied."]
     [:p "All examples, exercises and other digital materials created during the workshop will be shared with participants at the end of the workshop."]
