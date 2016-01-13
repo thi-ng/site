@@ -54,7 +54,11 @@ $(MAIN)/js/main/app.js: $(MAIN_SRC)
 	@mkdir -p $(MAIN)/js/main
 	@cp $(RES)/js/main/app.js $(MAIN)/js/main/
 
-main: main-html main-js main-css main-fonts main-img
+$(MAIN)/robots.txt: $(RES)/robots.txt
+	@mkdir -p $(MAIN)
+	@cp $(RES)/robots.txt $(MAIN)/
+
+main: main-html main-js main-css main-fonts main-img $(MAIN)/robots.txt
 
 install-main: main
 	@echo "syncing with: $(MAIN_TARGET)"
@@ -94,7 +98,11 @@ $(WS)/js/workshop/app.js: $(WS_SRC)
 	@mkdir -p $(WS)/js/workshop
 	@cp $(RES)/js/workshop/app.js $(WS)/js/workshop/
 
-ws: ws-html ws-js ws-css ws-fonts ws-img
+$(WS)/robots.txt: $(RES)/robots.txt
+	@mkdir -p $(WS)
+	@cp $(RES)/robots.txt $(WS)/
+
+ws: ws-html ws-js ws-css ws-fonts ws-img $(WS)/robots.txt
 
 install-ws: ws
 	@echo "syncing with: $(WS_TARGET)"
