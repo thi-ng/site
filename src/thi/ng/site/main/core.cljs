@@ -14,7 +14,7 @@
 (def projects
   {:babel    {:name    "thi.ng/babel"
               :version "0.3.2.1"
-              :stars   30
+              :stars   46
               :lit     true
               :loc     98
               :tags    ["template" "literate programming" "emacs" "clojure" "clojurescript"]
@@ -22,8 +22,8 @@
               :bg-pos  "50% 65%"
               :desc    "Project template for polyglot, literate programming with Emacs & Org-mode"}
    :color    {:name    "thi.ng/color"
-              :version "1.0.0"
-              :stars   21
+              :version "1.0.1"
+              :stars   27
               :lit     true
               :loc     1742
               :tags    ["color" "dataviz" "interop" "conversion" "clojure" "clojurescript"]
@@ -50,7 +50,7 @@
               :desc    "DOM generation, manipulation, async event bus and browser utilities"}
    :dstruct  {:name    "thi.ng/dstruct"
               :version "0.1.2"
-              :stars   1
+              :stars   6
               :lit     true
               :loc     960
               :tags    ["graph" "collections" "binary" "streams" "clojure" "clojurescript"]
@@ -59,7 +59,7 @@
               :desc    "Data structures & utilities: Disjoint sets, Interval Trees, collection helpers, binary data I/O"}
    :fourier  {:name    "thi.ng/fourier"
               :version "0.1.0"
-              :stars   0
+              :stars   5
               :lit     true
               :loc     392
               :tags    ["audio" "analysis" "dataviz" "clojure"]
@@ -68,7 +68,7 @@
               :desc    "Audio frequency analysis & visualization"}
    :geom     {:name    "thi.ng/geom"
               :version "0.0.908"
-              :stars   182
+              :stars   223
               :lit     true
               :loc     14784
               :tags    ["2d" "3d" "math" "analysis" "animation" "fabrication" "dataviz" "generative" "mesh" "svg" "matrix" "physics" "voxel" "webgl" "clojure" "clojurescript"]
@@ -102,7 +102,7 @@
                          :desc "WebGL rendering, shader lib & type conversions"}]}
    :fabric   {:name    "thi.ng/fabric"
               :version "0.0.376"
-              :stars   19
+              :stars   38
               :lit     true
               :loc     4796
               :tags    ["dsl" "declarative" "async" "graph" "linked data" "query" "parser" "server" "dataviz" "clojure" "clojurescript"]
@@ -121,7 +121,7 @@
                          :desc "linked data server & query enpoint"}]}
    :luxor    {:name    "thi.ng/luxor"
               :version "0.3.1"
-              :stars   56
+              :stars   61
               :lit     true
               :loc     1309
               :tags    ["dsl" "3d" "graph" "conversion" "rendering" "clojure" "luxrender"]
@@ -130,7 +130,7 @@
               :desc    "Scene graph compiler, generator & mesh exporter for rendering with Luxrender"}
    :math     {:name    "thi.ng/math"
               :version "0.1.4"
-              :stars   3
+              :stars   4
               :lit     true
               :loc     906
               :tags    ["interpolation" "math" "macros" "noise" "binary" "interop" "clojure" "clojurescript"]
@@ -139,7 +139,7 @@
               :desc    "Useful math ops, noise functions, bit manipulation and macro definitions to simplify complex equations"}
    :morpho   {:name    "thi.ng/morphogen"
               :version "0.1.1"
-              :stars   74
+              :stars   85
               :lit     true
               :loc     895
               :tags    ["dsl" "generative" "fabrication" "3d" "mesh" "clojure" "clojurescript"]
@@ -148,7 +148,7 @@
               :desc    "3d form evolution through tree-based transformations"}
    :ndarray  {:name    "thi.ng/ndarray"
               :version "0.3.0"
-              :stars   9
+              :stars   13
               :lit     true
               :loc     813
               :tags    ["matrix" "math" "2d" "3d" "4d" "macros" "clojure" "clojurescript"]
@@ -157,7 +157,7 @@
               :desc    "Multidimensional primitive arrays with almost zero-cost view transformations, isoline extraction"}
    :raymarch {:name    "thi.ng/raymarchcl"
               :version "0.1.0"
-              :stars   106
+              :stars   111
               :loc     894
               :tags    ["rendering" "voxel" "opencl"  "clojure"]
               :bg-uri  "raymarchcl/hero.jpg"
@@ -166,7 +166,7 @@
                         [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]}
    :sgraph   {:name    "thi.ng/shadergraph"
               :version "0.1.1"
-              :stars   11
+              :stars   14
               :lit     true
               :loc     554
               :tags    ["rendering" "graph" "gpu" "webgl" "macros" "clojurescript"]
@@ -175,7 +175,7 @@
               :desc    "Composable WebGL / GLSL shader library & dependency graph resolution"}
    :simplecl {:name    "thi.ng/simplecl"
               :version "0.2.2"
-              :stars   11
+              :stars   13
               :loc     701
               :tags    ["dsl" "interop" "opencl" "gpu" "clojure"]
               :bg-uri  "simplecl/hero.jpg"
@@ -192,7 +192,7 @@
               :desc    "Extensible string formatting, date formatting, number parsers"}
    :structg  {:name    "thi.ng/structgen"
               :version "0.2.1"
-              :stars   4
+              :stars   5
               :loc     507
               :tags    ["interop" "binary" "parser" "conversion" "opencl"]
               :bg-uri  "structgen/hero.jpg"
@@ -200,7 +200,7 @@
               :desc    "Interop library for working with native C structs and binary formats"}
    :trio     {:name    "thi.ng/trio"
               :version "0.1.0"
-              :stars   39
+              :stars   40
               :lit     true
               :loc     3066
               :tags    ["dsl" "graph" "linked data" "parser" "query" "declarative"]
@@ -218,7 +218,7 @@
               :desc    "Clojurescript wrapper & convenience functions for JavaScript typed arrays"}
    :tweeny   {:name    "thi.ng/tweeny"
               :version "0.1.0-SNAPSHOT"
-              :stars   5
+              :stars   10
               :loc     122
               :tags    ["interpolation" "animation" "math" "clojure" "clojurescript"]
               :bg-uri  "tweeny/hero.jpg"
@@ -226,7 +226,7 @@
               :desc    "Keyframe interpolation of arbitrary nested values, completely customizable"}
    :validate {:name    "thi.ng/validate"
               :version "0.1.3"
-              :stars   20
+              :stars   22
               :loc     383
               :tags    ["dsl" "validation" "declarative" "collections" "clojure" "clojurescript"]
               :bg-uri  "validate/hero.jpg"
