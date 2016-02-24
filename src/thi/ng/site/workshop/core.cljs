@@ -10,30 +10,122 @@
    [re-frame.core :refer [subscribe dispatch dispatch-sync]]))
 
 (def workshops
-  [{:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming (2 days)"
-    :date     "23 - 24 January 2016"
+  [{:title    "High Performance Clojurescript - WebGL, GPU computing, asm.js & Web workers"
+    :date     "21 - 23 March 2016"
+    :loc      "North London"
+    :audience "Intermediate Clojure/Clojurescript"
+    :capacity 8
+    :id       "WS-LDN-5"
+    :price    "£575.00 (+ 20% VAT in UK only)"
+    :topics   ["Clojurescript" "WebGL" "GLSL shader composition" "asm.js" "2D/3D geometry" "Game development" "GPGPU" "core.async" "Web workers" "Multi-threading" "Websockets" "Optimization" "Closure compiler modules" "React.js" "Figwheel"]
+    :shopify  {:store    "thi-ng-store.myshopify.com"
+               :product  "High Performance Clojurescript - WebGL, GPU computing, asm.js, web workers (March 2016)"
+               :handle   "fast-clojurescript-webgl-gpu-computing-asm-js-web-workers"
+               :cart     "11263708101:1"
+               :discount {:id "WS-LDN-5-EARLY" :num 3 :percent "15%" :until "1 March 2016"}}
+    :extras   [:div
+               [:p [:img {:src "/img/workshop/commits-ws-ldn-5.jpg" :alt "Example screenshot" :width "100%"}]]
+               [:p "Screenshot of a WebGL/GLSL computed visualization of GitHub commits"]]
+    :desc     [:div
+               "As Clojurescript is finding more inroads into interactive, online & mobile apps, experiences and games with high demands on runtime performance, this workshop is tailored to give you the insights and techniques required to tickle out maximum performance for your demanding CLJS projects where it matters. Although not exclusively aimed at games developers, we will be mainly using (and building) a simple 3D game as learning context to learn about:"
+               [:h3 "Scheduled topics"]
+               [:ul
+                [:li "Awareness & workarounds for current bottlenecks in Clojurescript performance (e.g. data type choices, calling patterns, general architecture, impacts on filesize)"]
+                [:li "Important WebGL concepts (processing pipeline, attributes, buffer types, textures, render targets)"]
+                [:li "Seamlessly use " [:a {:href "http://thi.ng/geom"} "thi.ng/geom"] " with WebGL & GLSL for rendering and offloading computations to the GPU"]
+                [:li "Build modular GLSL shaders and compose shader functionality using " [:a {:href "http://thi.ng/shadergraph"} "thi.ng/shadergraph"]]
+                [:li "Use " [:a {:href "http://en.wikipedia.org/wiki/Web_worker"} "Web workers"] " with Clojurescript to achieve true multi-threading"]
+                [:li "Integrate " [:a {:href "http://asmjs.org"} "asm.js"] " blocks & Javascript typed arrays to improve CPU-bound performance"]
+                [:li "Offload computations to a server and stream back results in realtime via Websockets"]
+                [:li "Use the browser's LocalHistory object as inter-session cache/database"]
+                [:li "Setup a project structure for compiling modular codebases"]
+                [:li "Build the supporting game UI with Reagent & Figwheel"]]
+               [:p "Most of the techniques discussed are also applicable and easily transferrable to other non-game oriented use cases, which require similar high runtime performance. Included too is an in-depth walkthrough of realworld projects demonstrating related techniques."]
+               [:h3 "Requirements"]
+               [:ul
+                [:li "OSX / Linux / Windows7+ laptop with GPU (" [:a {:href "http://www.browserleaks.com/webgl"} "floating point texture support"] ")"]
+                [:li "Intermediate Clojurescript knowledge, not for complete beginners of the language"]]
+               [:p "Included in workshop fee:"]
+               [:ul
+                [:li "Food & hot drinks"]]
+               [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}
+   {:title    "Building Clojure / Clojurescript desktop apps with OpenGL4, OpenCL & Electron"
+    :date     "7 - 8 April 2016"
+    :loc      "North London"
+    :audience "Intermediate Clojure/Clojurescript"
+    :capacity 8
+    :id       "WS-LDN-6"
+    :price    "£380.00 (+ 20% VAT in UK only)"
+    :topics   ["Clojure" "Java interop" "UI design & implementation" "OpenGL" "OpenCL" "Binary data" "Shared memory" "GLSL" "Native libraries" "GPGPU" "Data visualization" "Electron" "Image I/O" "Build process"]
+    :shopify  {:store    "thi-ng-store.myshopify.com"
+               :product  "Building Clojure / Clojurescript desktop apps with OpenGL4, OpenCL &amp; Electron (April 2016)"
+               :handle   "building-clojure-clojurescript-desktop-apps-with-opengl4-opencl-electron"
+               :cart     "11264258053:1"
+               :discount {:id "WS-LDN-6-EARLY" :num 3 :percent "15%"}}
+    :extras   [:div
+               [:p [:img {:src "/img/workshop/lcom-ws-ldn-6.jpg" :alt "Example screenshot" :width "100%"}]]
+               [:p "Screenshot of a client project realised with the same tools as used in the workshop. Written in Clojure, OpenGL & OpenCL."]]
+    :desc     [:div
+               "Whereas the previous workshop is focused on performance intensive applications primarily in the browser, this session is for those interested in using Clojure with modern, native high-performance frameworks to create standalone desktop applications, e.g. graphics intense, interactive data visualizations, machine learning, academic research tools, games, incl. learn how to build and manipulate these dynamically from the REPL. We will enter territory still unexplored by most professional Clojurians and get a glimpse, how with the help of OpenGL4 & OpenCL, we can truly make the most of Clojure and enable it for more use cases."
+               [:h3 "Scheduled topics"]
+               [:ul
+                [:li "Review of important 2d/3d geometry concepts (vector algebra, matrices, coordinate systems)"]
+                [:li "Working with native libraries in Clojure"]
+                [:li "OpenGL concepts (pipeline, buffers, textures, shaders)"]
+                [:li "Working with OpenGL4 (mesh generation, geometry loading, basic lighting, shader examples)"]
+                [:li "Comparison of OpenGL4 & WebGL features"]
+                [:li "Advanced Java interop, AOT compilation, shared Java sources, wrapping Java event listeners"]
+                [:li "Build GPU accelerated, declarative UI widgets with thi.ng/joglui (release forthcoming)"]
+                [:li "OpenCL toolchain install, concept overview (devices, contexts, pipelines, buffers, barriers) "]
+                [:li "Defining & interacting with OpenCL compute kernels from Clojure via " [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]
+                [:li "Displaying OpenCL computation results via OpenGL and Java graphics API"]
+                [:li "Generating & exporting assets to the file system / server"]
+                [:li "Exporting the project as standalone app (still requires Java on target machine) "]
+                [:li "Walkthrough of Clojurescript desktop example app built with " [:a {:href "http://electron.atom.io"} "Electron"]]]
+               [:h3 "Requirements"]
+               [:ul
+                [:li "OSX / Linux / Windows7+ laptop w/ OpenGL4 capable OS/GPU (e.g. min. OSX version 10.10)"]
+                [:li "Intermediate Clojure knowledge, not for complete beginners of the language"]]
+               [:p "Included in workshop fee:"]
+               [:ul
+                [:li "Food & hot drinks"]]
+               [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}
+   {:title    "DIY Synth ARM programming with arm.thi.ng @ Resonate festival, Belgrade"
+    :date     "11 - 13 April 2016"
+    :loc      "Parobrod Cultural Centre, Belgrade"
+    :audience "Beginner/intermediate embedded device programming"
+    :capacity 12
+    :id       "WS-BEO-3"
+    :price    "€299.00 (incl. STM32F746G dev board)"
+    :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques" "Collaborative music recording"]
+    :extras   [:div
+               [:p [:img {:src "/img/workshop/stm-synth-resonate.jpg" :alt "STM32F746-DISCO board" :width "100%"}]]]
+    :desc     [:div
+               "In April, Resonate.io, one of Europe's best electronic arts festivals, will celebrate its 5th anniversary and I'm extremely pleased to take part once more again by running a 3-day workshop about the ongoing ARM based DSP & MIDI synth project, I've been working on for almost a year..."
+               [:p "You can find the " [:a {:href "http://resonate.io/2016/education/embedded-music-baremetal-arm-programming-with-c-thi-ng/"} "full outline & booking information on the Resonate website."]]
+               [:p "If you can't make it to Belgrade, I will run a very similar (though one day shorter) session in London later that month. Details for that are right below."]]}
+   {:title    "Embedded music & DIY Synth ARM programming with arm.thi.ng"
+    :date     "23 - 24 April 2016"
     :loc      "North London"
     :audience "Beginner/intermediate embedded device programming"
     :capacity 7
-    :soldout  true
-    :id       "WS-LDN-4"
-    :price    (list "£320.00 (+ 20% VAT in UK only)," [:br] "(includes STM32F746G discovery board, £40)")
-    :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Interactive touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]
+    :id       "WS-LDN-7"
+    :price    (list "£325.00 (+ 20% VAT in UK only)," [:br] "(includes STM32F746G discovery board, 2x cables)")
+    :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]
     :shopify  {:store    "thi-ng-store.myshopify.com"
-               :product  "Interactive DIY Synth &amp; embedded GUIs: Getting started with ARM programming"
-               :handle   "interactive-diy-synth-embedded-guis-getting-started-with-arm-programming"
-               :cart     "9775120325:1"
-               :discount {:id "WS-LDN-4-EARLY" :num 3 :percent "25%"}}
+               :product  "Embedded music &amp; DIY Synth ARM programming with arm.thi.ng (April 2016)"
+               :handle   "embedded-music-diy-synth-arm-programming-with-arm-thi-ng"
+               :cart     "11264148677:1"
+               :discount {:id "WS-LDN-7-EARLY" :num 3 :percent "15%"}}
     :extras   [:div
-               [:p [:img {:src "/img/workshop/stm32f7-disco.jpg" :alt "STM32F746-DISCO board" :width "100%"}]]
-               [:p "We'll be using the STM32F746 discovery board, featuring a 200MHz Cortex-M7 CPU, 1MB Flash, 340KB RAM, 4.3\" LCD touchscreen, 2x USB, 44.1kHz audio, 2x microphone, microSD card, Ethernet"]
+               #_[:p [:img {:src "/img/workshop/stm-synth.jpg" :alt "STM32F746-DISCO board" :width "100%"}]]
+               [:p "We'll be using the STM32F746 discovery board, featuring a 216MHz Cortex-M7 CPU, 1MB Flash, 8MB SDRAM, 340KB RAM, 4.3\" LCD multitouch screen, 2x USB, 48kHz audio, 2x microphone, microSD card, Ethernet"]
                [:p "Work-in-progress sound samples: " [:a {:href "https://soundcloud.com/forthcharlie/sets/stm32f4"} "soundcloud.com/forthcharlie/sets/stm32f4"]]
                [:iframe
                 {:width "100%" :height "450" :scrolling "no" :frameBorder "no"
                  :src "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/159061174&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"}]]
     :desc     [:div
-               "This workshop is NOT related to Clojure and instead will introduce you to the exciting world of programming embedded devices outside the world of Arduino, working 'bare-metal' with the much more powerful ARM Cortex processor family."
-               [:p " We will use the " [:a {:href "http://www.st.com/web/en/catalog/tools/FM116/SC959/SS1532/LN1848/PF261641"} "STM32F746 discovery board"] " (included in workshop fee) and " [:strong "learn how to create a fully featured application: Our own polyphonic stereo MIDI synthesizer, sequencer with an interactive touchscreen GUI to control the instrument"] " - all of which you can take home later. This is not just going to be a lo-fi noise box!"]
+               "This workshop is NOT related to Clojure and has already run three times by now, but as the arm.thi.ng sub-project is constantly being further developed, each session is slightly different. In this session we will introduce you to the exciting world of programming ARM embedded devices outside the world of Arduino, working 'baremetal' with the powerful ARM Cortex-M processor family. We will use the " [:a {:href "http://www.st.com/web/en/catalog/tools/FM116/SC959/SS1532/LN1848/PF261641"} "STM32F746 discovery board"] " (included in workshop fee), the first device featuring the latest and most powerful CPU in the Cortex-M family. After an introduction to the ARM CPU family and baremetal topics, including basic examples demonstrating how to work with core peripherals of the board, we’ll then start using C libraries from the thi.ng project (still unreleased) and learn to create a few fully featured applications based on our own programmable, polyphonic stereo synthesizer and a multi-track MIDI step sequencer with interactive touchscreen GUIs to control the instrument – all of which you can take home later."
                [:p "Commented source code scaffolding will be provided to maximize time for experimentation."]
                [:h3 "Scheduled topics"]
                [:ul
@@ -45,6 +137,7 @@
                 [:li "Digital audio introduction, theory & experimentation"]
                 [:li "Intro to USB device classes & file systems (play/record WAV files)"]
                 [:li "Synthesizer DSP graph overview, audio/music theory, experimentation"]
+                [:li "Multi-track & multi-directional step sequencer"]
                 [:li "Introduction to MIDI & integrating with synthesizer / sequencer"]
                 [:li "Generative music composition techniques (scales, cellular automata etc.)"]
                 [:li "Manipulate the synth via touchscreen GUI controls"]
@@ -63,61 +156,55 @@
                 [:li [:a {:href "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF261641"} "STM32F7-DISCOVERY development board"]]
                 [:li "Food & hot drinks"]]
                [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}
-   {:title    "thi.ng x Studio NAND - Clojure(script) data visualization workshop (3 days)"
+   {:title    "High Performance Clojurescript - WebGL, GPU computing, asm.js & Web workers (April 2016)"
+    :date     "27 - 29 April 2016"
+    :loc      "North London"
+    :audience "Intermediate Clojure/Clojurescript"
+    :capacity 8
+    :id       "WS-LDN-8"
+    :price    "£575.00 (+ 20% VAT in UK only)"
+    :topics   ["Clojurescript" "WebGL" "GLSL shader composition" "asm.js" "2D/3D geometry" "Game development" "GPGPU" "core.async" "Web workers" "Multi-threading" "Websockets" "Optimization" "Closure compiler modules" "React.js" "Figwheel"]
+    :shopify  {:store    "thi-ng-store.myshopify.com"
+               :product  "High Performance Clojurescript - WebGL, GPU computing, asm.js, web workers (April 2016)"
+               :handle   "workshop-fast-clojurescript-webgl-gpu-computing-asm-js-web-workers-april-2016"
+               :cart     "11264390277:1"
+               :discount {:id "WS-LDN-8-EARLY" :num 3 :percent "15%"}}
+    :desc     [:div
+               "This is a repetition of the " [:a {:href "#WS-LDN-5"} "WS-LDN-5 workshop"] " described in detail above."
+               [:h3 "Requirements"]
+               [:ul
+                [:li "OSX / Linux / Windows7+ laptop with GPU (" [:a {:href "http://www.browserleaks.com/webgl"} "floating point texture support"] ")"]
+                [:li "Intermediate Clojurescript knowledge, not for complete beginners of the language"]]
+               [:p "Included in workshop fee:"]
+               [:ul
+                [:li "Food & hot drinks"]]
+               [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}])
+
+(def prev-workshops
+  [{:title    "thi.ng x Studio NAND - Clojure(script) data visualization workshop (3 days)"
     :date     "17 - 19 February 2016"
     :id       "WS-BLN-1"
     :loc      "Berlin Mitte"
     :audience "Intermediate Clojure knowledge"
-    :capacity 12
-    :price    "£445 professionals, £150 students (+ 20% VAT, UK only)"
-    :topics   ["Clojure / Clojurescript concepts" "Live coding workflow" "Interactive SVG & WebGL visualization" "Reactive SPA (using Reagent)" "Shape generation/manipulation" "Shader composition" "Linked Data basics & queries" "core.async dataflow graphs"]
-    :shopify  {:store    "thi-ng-store.myshopify.com"
-               :product  "thi.ng x Studio NAND - Clojure(script) workshop, Berlin"
-               :handle   "thi-ng-x-studionand-clojurescript-workshop-berlin"
-               :cart     "10035927621:1"
-               :capacity 8
-               :discount nil #_{:id "WS-BLN-1" :num 2 :percent "25%"}}
-    :extras   [:p "If you're a student, please first " [:a {:href "mailto:k@thi.ng?subject=WS-BLN-1 student discount"} "get in touch via email"] " before ordering. Valid student card is required to be eligble for discount. Only 2 student places available."]
-    :desc     [:div
-               "In this workshop, held in partnership with " [:a {:href "http://nand.io"} "Studio NAND"] ", we will focus on creating small 2D/3D visualizations in both Clojure & Clojurescript, i.e. with & without the browser (using " [:a {:href "http://electron.atom.io/"} "Elektron"] "). Using various projects from the thi.ng collection, this workshop will introduce you to many concepts, techniques related to Clojure, WebGL/GLSL, data modeling and dataflow, in a practical creative coding context:"
-               [:ul
-                [:li "Tooling & REPL-driven workflow alternatives"]
-                [:li "Overview of Clojure concepts (collections, higher-order functions, protocols, polymorphism, macros)"]
-                [:li "Overview of " [:a {:href "http://thi.ng/"} "thi.ng"] " projects used for workshop"]
-                [:li "Concurrency basics (promises, delays, futures, agents, atoms, refs)"]
-                [:li "Dataflow core.async introduction"]
-                [:li "Using graph data structures, theory, linked data & code representations"]
-                [:li "Importing & querying Linked Data sets/graphs using a DSL"]
-                [:li "Setting up a simple server (using components)"]
-                [:li "Building reactive UI with "
-                 [:a {:href "https://github.com/bhauman/lein-figwheel"} "Figwheel"] " and "
-                 [:a {:href "http://reagent-project.github.io"} "Reagent"]]
-                [:li "Representing & transforming DOM fragments in Clojure(script)"]
-                [:li "Geometry, vector algebra & WebGL introduction, Clojurescript examples"]
-                [:li "Shape & mesh generation / manipulation"]
-                [:li "Working with color spaces, mapping colors"]
-                [:li "Creating visualizations with SVG & WebGL"]
-                [:li "WebGL shaders, composing shaders from re-usable fragments"]
-                [:li "Event handling & event busses using core.async"]
-                [:li "Animating & interacting with a 3D scene"]
-                [:li "Using an Entity Component System for flexible state handling"]]
-               [:p "All participants need to bring the following items:"]
-               [:ul
-                [:li "OSX / Linux / Windows7+ laptop"]
-                [:li "Java JDK 7+ installed"]]
-               [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}])
-
-(def prev-workshops
-  [{:title    "Special workshop: DIY Synth - Getting started with bare-metal ARM programming"
-    :date     "5-6 December 2015"
-    :url      "https://github.com/thi-ng/ws-ldn-3"
+    ;;:url      "https://github.com/thi-ng/ws-bln-1/"
+    :topics   ["Clojure / Clojurescript concepts" "Live coding workflow" "Interactive SVG & WebGL visualization" "Reactive SPA (using Reagent)" "Shape generation/manipulation" "Shader composition" "Linked Data basics & queries"]}
+   {:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming (2 days)"
+    :date     "23 - 24 January 2016"
+    :loc      "North London"
+    :audience "Beginner/intermediate embedded device programming"
+    :id       "WS-LDN-4"
+    :url      "https://github.com/thi-ng/ws-ldn-4/"
+    :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Interactive touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]}
+   {:title    "DIY Synth - Getting started with bare-metal ARM programming"
+    :date     "5 - 6 December 2015"
+    :url      "https://github.com/thi-ng/ws-ldn-3/"
     :id       "WS-LDN-3"
     :loc      "North London"
     :audience "Beginner/intermediate embedded device programming"
     :topics   ["ARM Cortex-M overview" "Embedded C programming with Eclipse & GCC toolchain" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
     :report   {:url "https://soundcloud.com/forthcharlie/sets/stm32f4" :title "Audio examples (Soundcloud)"}}
    {:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
-    :date     "11-13 November 2015"
+    :date     "11 - 13 November 2015"
     :url      "https://github.com/thi-ng/ws-ldn-2/"
     :id       "WS-LDN-2"
     :loc      "London"
@@ -125,7 +212,7 @@
     :topics   ["Advanced Clojure / Clojurescript concepts" "Channel based concurrency (CSP / core.async)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive SVG heatmaps" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Query visualization"]
     :report   {:url "https://medium.com/@thi.ng/workshop-report-building-linked-data-heatmaps-with-clojurescript-thi-ng-102e0581225c" :title "Workshop report (blog post)"}}
    {:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
-    :date     "2-4 November 2015"
+    :date     "2 - 4 November 2015"
     :url      "https://github.com/thi-ng/ws-ldn-1/"
     :id       "WS-LDN-1"
     :loc      "London"
@@ -207,7 +294,8 @@
         [:tr [:th "Date:"] [:td (:date ws)]]
         [:tr [:th "Location:"] [:td (:loc ws)]]
         [:tr [:th "Audience:"] [:td (:audience ws)]]
-        [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} "Github repo"]]]
+        (when-let [repo (:url ws)]
+          [:tr [:th "Repository:"] [:td [:a {:href (:url ws)} "Github repo"]]])
         (when-let [rep (:report ws)]
           [:tr [:th "Report:"] [:td [:a {:href (:url rep)} (:title rep)]]])]]]
      [:div.col2
@@ -314,6 +402,7 @@ Albert Museum's permanent collection."]]]
     (dispatch-sync [:init-app]))
   (.initializeTouchEvents js/React true)
   (reagent/render-component
-   [main-panel] (.getElementById js/document "app")))
+   [main-panel] (.getElementById js/document "app"))
+  #_(.log js/console (reagent/render-to-static-markup [main-panel])))
 
 (main)
