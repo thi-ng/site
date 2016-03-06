@@ -23,7 +23,8 @@
                                     "resources/public/js/workshop"
                                     "target"]
 
-  :profiles      {:prod {:env {:log-level 4}}}
+  :profiles      {:dev {:dependencies [[thi.ng/geom "0.0.908"]]}
+                  :prod {:env {:log-level 4}}}
 
   :cljsbuild     {:builds [{:id           "dev"
                             :source-paths ["src"]
