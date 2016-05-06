@@ -101,7 +101,7 @@ footer a:link, footer a:hover, footer a:visited {
 
 #intro {
     margin: 0 -20px;
-    padding: 0 20px 30px 20px;
+    padding: 0 20px;
     max-width: initial;
     background: #bff;
     padding-top: 100px;
@@ -118,7 +118,7 @@ footer a:link, footer a:hover, footer a:visited {
 }
 
 #gallery div {
-    width: 6000px;
+    width: 6400px;
 }
 
 #gallery img {
@@ -127,7 +127,7 @@ footer a:link, footer a:hover, footer a:visited {
 
 .topics {
     margin: 0 -20px;
-    background-color: #a5f;
+    background-color: #4af;
     padding: 10px 20px;
     color: #f8f6f6;
     line-height: 1.2;
@@ -136,6 +136,24 @@ footer a:link, footer a:hover, footer a:visited {
 .topics .list {
     font-size: 150%;
     font-style: italic;
+}
+
+#testimonials {
+    margin: 0 -20px;
+    background-color: #ffa;
+    padding: 40px 20px;
+    line-height: 1.2;
+    font-size: 150%;
+    font-style: italic;
+    min-height: 5.5em;
+}
+
+#testimonials h2 {
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
 }
 
 .discount {
@@ -191,7 +209,7 @@ section {
 }
 
 .space:before {
-  content: "\00a0";
+    content: "\00a0";
 }
 
 .row {
@@ -346,6 +364,21 @@ span.tag:hover {
     animation-name: fadeIn;
 }
 
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+
+}
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
 .bounceInDown {
     -webkit-animation-name: bounceInDown;
     animation-name: bounceInDown;
@@ -353,12 +386,12 @@ span.tag:hover {
 
 @-webkit-keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-3000px); }
+    100% { transform: translateX(-3200px); }
 }
 
 @keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-3000px); }
+    100% { transform: translateX(-3200px); }
 }
 
 .scroll {
@@ -654,26 +687,26 @@ span.tag:hover {
     content: "\f09b";
 }
 .fa-medium:before {
-  content: "\f23a";
+    content: "\f23a";
 }
 .fa-spinner:before {
     content: "\f110";
 }
 .fa-caret-up:before {
-  content: "\f0d8";
+    content: "\f0d8";
 }
 .fa-envelope:before {
-  content: "\f0e0";
+    content: "\f0e0";
 }
 .fa-cc-visa:before {
-  content: "\f1f0";
+    content: "\f1f0";
 }
 .fa-cc-mastercard:before {
-  content: "\f1f1";
+    content: "\f1f1";
 }
 .fa-cc-amex:before {
-  content: "\f1f3";
+    content: "\f1f3";
 }
 .fa-cc-paypal:before {
-  content: "\f1f4";
+    content: "\f1f4";
 }
