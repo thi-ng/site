@@ -1,0 +1,7 @@
+{:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming (2 days)"
+ :date     "23 - 24 January 2016"
+ :loc      "North London"
+ :audience "Beginner/intermediate embedded device programming"
+ :id       "WS-LDN-4"
+ :url      "https://github.com/thi-ng/ws-ldn-4/"
+ :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Interactive touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]}

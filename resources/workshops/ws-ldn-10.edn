@@ -1,0 +1,30 @@
+{:title    "Generative design with Clojure & ClojureScript"
+ :date     "22 - 24 June 2016"
+ :loc      "North London"
+ :audience "Intermediate Clojure/ClojureScript"
+ :capacity 8
+ :id       "WS-LDN-10"
+ :price    "£575.00 (+ 20% VAT in UK only)"
+ :url      "https://github.com/thi-ng/ws-ldn-10/"
+ :topics   ["Clojure" "Clojurescript" "OpenGL" "Geometry" "Physics simulation" "3D meshing" "Agent systems"]
+ :shopify  {:store    "thi-ng-store.myshopify.com"
+            :product  ""
+            :handle   ""
+            :cart     ""
+            :discount {:id "WS-LDN-10-EARLY" :num 3 :percent "15%" :until "1 June 2016"}}
+ :extras   [:div
+            [:p [:img {:src "/img/workshop/commits-ws-ldn-10.jpg" :alt "Example screenshot" :width "100%"}]]
+            [:p ""]]
+ :desc     [:div
+            "As Clojurescript is finding more inroads into interactive, online & mobile apps, experiences and games with high demands on runtime performance, this workshop is tailored to give you the insights and techniques required to tickle out maximum performance for your demanding CLJS projects where it matters. Although not exclusively aimed at games developers, we will be mainly using (and building) a simple 3D game as learning context to learn about:"
+            [:h3 "Scheduled topics"]
+            [:ul
+             [:li "Generative techniques"]]
+            [:h3 "Requirements"]
+            [:ul
+             [:li "OSX / Linux / Windows7+ laptop with GPU (for OpenGL / WebGL)"]
+             [:li "Intermediate Clojurescript knowledge, not for complete beginners of the language"]]
+            [:p "Included in workshop fee:"]
+            [:ul
+             [:li "Food & hot drinks"]]
+            [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}

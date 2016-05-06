@@ -1,0 +1,7 @@
+{:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
+ :date     "2 - 4 November 2015"
+ :url      "https://github.com/thi-ng/ws-ldn-1/"
+ :id       "WS-LDN-1"
+ :loc      "London"
+ :audience "Beginner, intermediate Clojure knowledge"
+ :topics   ["Clojure / Clojurescript core concepts" "Workflow & toolchain options" "Collections & sequences" "Data transformations w/ transducers" "Protocols" "Data visualization techniques, mapping & charting" "CSV parsing & transformation" "2D/3D geometry generation & manipulation" "SVG generation / mapping" "React.js / Reagent examples" "WebGL basics"]}

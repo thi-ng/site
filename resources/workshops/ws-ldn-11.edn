@@ -1,0 +1,40 @@
+{:title    "High Performance Clojurescript - WebGL, GPU computing, asm.js & Web workers"
+ :date     "21 - 23 March 2016"
+ :loc      "North London"
+ :audience "Intermediate Clojure/Clojurescript"
+ :capacity 8
+ :id       "WS-LDN-5"
+ :price    "£575.00 (+ 20% VAT in UK only)"
+ :url      "https://github.com/thi-ng/ws-ldn-5/"
+ :topics   ["Clojurescript" "WebGL" "GLSL shader composition" "asm.js" "2D/3D geometry" "Game development" "GPGPU" "core.async" "Web workers" "Multi-threading" "Websockets" "Optimization" "Closure compiler modules" "React.js" "Figwheel"]
+ :shopify  {:store    "thi-ng-store.myshopify.com"
+            :product  "High Performance Clojurescript - WebGL, GPU computing, asm.js, web workers (March 2016)"
+            :handle   "fast-clojurescript-webgl-gpu-computing-asm-js-web-workers"
+            :cart     "11263708101:1"
+            :discount {:id "WS-LDN-5-EARLY" :num 3 :percent "15%" :until "1 March 2016"}}
+ :extras   [:div
+            [:p [:img {:src "/img/workshop/commits-ws-ldn-5.jpg" :alt "Example screenshot" :width "100%"}]]
+            [:p "Screenshot of a WebGL/GLSL computed visualization of GitHub commits"]]
+ :desc     [:div
+            "As Clojurescript is finding more inroads into interactive, online & mobile apps, experiences and games with high demands on runtime performance, this workshop is tailored to give you the insights and techniques required to tickle out maximum performance for your demanding CLJS projects where it matters. Although not exclusively aimed at games developers, we will be mainly using (and building) a simple 3D game as learning context to learn about:"
+            [:h3 "Scheduled topics"]
+            [:ul
+             [:li "Awareness & workarounds for current bottlenecks in Clojurescript performance (e.g. data type choices, calling patterns, general architecture, impacts on filesize)"]
+             [:li "Important WebGL concepts (processing pipeline, attributes, buffer types, textures, render targets)"]
+             [:li "Seamlessly use " [:a {:href "http://thi.ng/geom"} "thi.ng/geom"] " with WebGL & GLSL for rendering and offloading computations to the GPU"]
+             [:li "Build modular GLSL shaders and compose shader functionality using " [:a {:href "http://thi.ng/shadergraph"} "thi.ng/shadergraph"]]
+             [:li "Use " [:a {:href "http://en.wikipedia.org/wiki/Web_worker"} "Web workers"] " with Clojurescript to achieve true multi-threading"]
+             [:li "Integrate " [:a {:href "http://asmjs.org"} "asm.js"] " blocks & Javascript typed arrays to improve CPU-bound performance"]
+             [:li "Offload computations to a server and stream back results in realtime via Websockets"]
+             [:li "Use the browser's LocalHistory object as inter-session cache/database"]
+             [:li "Setup a project structure for compiling modular codebases"]
+             [:li "Build the supporting game UI with Reagent & Figwheel"]]
+            [:p "Most of the techniques discussed are also applicable and easily transferrable to other non-game oriented use cases, which require similar high runtime performance. Included too is an in-depth walkthrough of realworld projects demonstrating related techniques."]
+            [:h3 "Requirements"]
+            [:ul
+             [:li "OSX / Linux / Windows7+ laptop with GPU (" [:a {:href "http://www.browserleaks.com/webgl"} "floating point texture support"] ")"]
+             [:li "Intermediate Clojurescript knowledge, not for complete beginners of the language"]]
+            [:p "Included in workshop fee:"]
+            [:ul
+             [:li "Food & hot drinks"]]
+            [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}

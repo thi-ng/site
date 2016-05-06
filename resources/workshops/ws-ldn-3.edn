@@ -1,0 +1,8 @@
+{:title    "DIY Synth - Getting started with bare-metal ARM programming"
+ :date     "5 - 6 December 2015"
+ :url      "https://github.com/thi-ng/ws-ldn-3/"
+ :id       "WS-LDN-3"
+ :loc      "North London"
+ :audience "Beginner/intermediate embedded device programming"
+ :topics   ["ARM Cortex-M overview" "Embedded C programming with Eclipse & GCC toolchain" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
+ :report   {:url "https://soundcloud.com/forthcharlie/sets/stm32f4" :title "Audio examples (Soundcloud)"}}

@@ -1,0 +1,7 @@
+{:title    "thi.ng x Studio NAND - Clojure(script) data visualization workshop (3 days)"
+ :date     "17 - 19 February 2016"
+ :id       "WS-BLN-1"
+ :loc      "Berlin Mitte"
+ :audience "Intermediate Clojure knowledge"
+ ;;:url      "https://github.com/thi-ng/ws-bln-1/"
+ :topics   ["Clojure / Clojurescript concepts" "Live coding workflow" "Interactive SVG & WebGL visualization" "Reactive SPA (using Reagent)" "Shape generation/manipulation" "Shader composition" "Linked Data basics & queries"]}

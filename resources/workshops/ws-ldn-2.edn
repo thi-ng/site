@@ -1,0 +1,8 @@
+{:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
+ :date     "11 - 13 November 2015"
+ :url      "https://github.com/thi-ng/ws-ldn-2/"
+ :id       "WS-LDN-2"
+ :loc      "London"
+ :audience "Intermediate Clojure knowledge"
+ :topics   ["Advanced Clojure / Clojurescript concepts" "Channel based concurrency (CSP / core.async)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive SVG heatmaps" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Query visualization"]
+ :report   {:url "https://medium.com/@thi.ng/workshop-report-building-linked-data-heatmaps-with-clojurescript-thi-ng-102e0581225c" :title "Workshop report (blog post)"}}

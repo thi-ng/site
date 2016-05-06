@@ -6,7 +6,9 @@
    [clojure.edn :as edn]))
 
 (def workshops
-  (->> []
+  (->> ["ws-ldn-9.edn"
+        "ws-ldn-10.edn"
+        "ws-ldn-11.edn"]
        (mapv #(edn/read-string (slurp (str "resources/workshops/" %))))))
 
 (def prev-workshops
@@ -64,7 +66,7 @@
                 [:td.discount
                  (:percent disc) " off" (if-let [n (:num disc)] (str " for first " n " participants"))
                  [:br] "Checkout code: " [:strong (:id disc)]]]))
-           [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] [shopify-button (:shopify ws)])]]))]]
+           [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] (shopify-button (:shopify ws)))]]))]]
       (:extras ws)]
      [:div.col2 (:desc ws)]]
     [:div.space]]
