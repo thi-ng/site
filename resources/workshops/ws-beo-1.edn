@@ -1,0 +1,14 @@
+{:title    "DIY Synth ARM programming with arm.thi.ng @ Resonate festival, Belgrade"
+ :date     "11 - 13 April 2016"
+ :loc      "Parobrod Cultural Centre, Belgrade"
+ :audience "Beginner/intermediate embedded device programming"
+ :capacity 12
+ :id       "WS-BEO-3"
+ :price    "€299.00 (incl. STM32F746G dev board)"
+ :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques" "Collaborative music recording"]
+ :extras   [:div
+            [:p [:img {:src "/img/workshop/stm-synth-resonate.jpg" :alt "STM32F746-DISCO board" :width "100%"}]]]
+ :desc     [:div
+            "In April, Resonate.io, one of Europe's best electronic arts festivals, will celebrate its 5th anniversary and I'm extremely pleased to take part once more again by running a 3-day workshop about the ongoing ARM based DSP & MIDI synth project, I've been working on for almost a year..."
+            [:p "You can find the " [:a {:href "http://resonate.io/2016/education/embedded-music-baremetal-arm-programming-with-c-thi-ng/"} "full outline & booking information on the Resonate website."]]
+            [:p "If you can't make it to Belgrade, I will run a very similar (though one day shorter) session in London later that month. Details for that are right below."]]}

@@ -1,0 +1,52 @@
+{:title    "Embedded music & DIY Synth ARM programming with arm.thi.ng"
+ :date     "23 - 24 April 2016"
+ :loc      "North London"
+ :audience "Beginner/intermediate embedded device programming"
+ :capacity 7
+ :id       "WS-LDN-7"
+ :price    (list "£325.00 (+ 20% VAT in UK only)," [:br] "(includes STM32F746G discovery board, 2x cables)")
+ :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]
+ :shopify  {:store    "thi-ng-store.myshopify.com"
+            :product  "Embedded music &amp; DIY Synth ARM programming with arm.thi.ng (April 2016)"
+            :handle   "embedded-music-diy-synth-arm-programming-with-arm-thi-ng"
+            :cart     "11264148677:1"
+            :discount {:id "WS-LDN-7-EARLY" :num 3 :percent "15%"}}
+ :extras   [:div
+            #_[:p [:img {:src "/img/workshop/stm-synth.jpg" :alt "STM32F746-DISCO board" :width "100%"}]]
+            [:p "We'll be using the STM32F746 discovery board, featuring a 216MHz Cortex-M7 CPU, 1MB Flash, 8MB SDRAM, 340KB RAM, 4.3\" LCD multitouch screen, 2x USB, 48kHz audio, 2x microphone, microSD card, Ethernet"]
+            [:p "Work-in-progress sound samples: " [:a {:href "https://soundcloud.com/forthcharlie/sets/stm32f4"} "soundcloud.com/forthcharlie/sets/stm32f4"]]
+            [:iframe
+             {:width "100%" :height "450" :scrolling "no" :frameBorder "no"
+              :src "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/159061174&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"}]]
+ :desc     [:div
+            "This workshop is NOT related to Clojure and has already run three times by now, but as the arm.thi.ng sub-project is constantly being further developed, each session is slightly different. In this session we will introduce you to the exciting world of programming ARM embedded devices outside the world of Arduino, working 'baremetal' with the powerful ARM Cortex-M processor family. We will use the " [:a {:href "http://www.st.com/web/en/catalog/tools/FM116/SC959/SS1532/LN1848/PF261641"} "STM32F746 discovery board"] " (included in workshop fee), the first device featuring the latest and most powerful CPU in the Cortex-M family. After an introduction to the ARM CPU family and baremetal topics, including basic examples demonstrating how to work with core peripherals of the board, we’ll then start using C libraries from the thi.ng project (still unreleased) and learn to create a few fully featured applications based on our own programmable, polyphonic stereo synthesizer and a multi-track MIDI step sequencer with interactive touchscreen GUIs to control the instrument – all of which you can take home later."
+            [:p "Commented source code scaffolding will be provided to maximize time for experimentation."]
+            [:h3 "Scheduled topics"]
+            [:ul
+             [:li "Introduction to ARM CPU family and the STM32 development board"]
+             [:li "Open source toolchain setup (Eclipse, GCC, OpenOCD, ST-Link)"]
+             [:li "Overview/review of important C language concepts"]
+             [:li "Basic examples (clock config, timers, GPIO, 8x LED, LCD display)"]
+             [:li "Overview of multi-tasking via interrupts"]
+             [:li "Digital audio introduction, theory & experimentation"]
+             [:li "Intro to USB device classes & file systems (play/record WAV files)"]
+             [:li "Synthesizer DSP graph overview, audio/music theory, experimentation"]
+             [:li "Multi-track & multi-directional step sequencer"]
+             [:li "Introduction to MIDI & integrating with synthesizer / sequencer"]
+             [:li "Generative music composition techniques (scales, cellular automata etc.)"]
+             [:li "Manipulate the synth via touchscreen GUI controls"]
+             [:li "Project development / making music"]]
+            [:h3 "Requirements"]
+            [:p "This workshop is going to be fast paced, but primarily intended for beginners to embedded development. Previous programming experience in Arduino/C/C++ or Processing/Java/Python etc. is desired, but coding will be kept to a minimum for time reasons"]
+            [:p "All participants need to bring the following items:"]
+            [:ul
+             [:li "OSX / Linux / Windows7+ laptop"]
+             [:li "Headphones"]
+             [:li "USB Memory stick (MS-DOS formatted)"]
+             [:li "USB OTG cable"]
+             [:li "USB MIDI controller if you have one (e.g. Korg NanoKey / NanoKontrol2)"]]
+            [:p "Included in workshop fee:"]
+            [:ul
+             [:li [:a {:href "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF261641"} "STM32F7-DISCOVERY development board"]]
+             [:li "Food & hot drinks"]]
+            [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}

@@ -1,0 +1,23 @@
+{:title    "High Performance Clojurescript - WebGL, GPU computing, asm.js & Web workers (April 2016)"
+ :date     "27 - 29 April 2016"
+ :loc      "North London"
+ :audience "Intermediate Clojure/Clojurescript"
+ :capacity 8
+ :id       "WS-LDN-8"
+ :price    "£575.00 (+ 20% VAT in UK only)"
+ :topics   ["Clojurescript" "WebGL" "GLSL shader composition" "asm.js" "2D/3D geometry" "Game development" "GPGPU" "core.async" "Web workers" "Multi-threading" "Websockets" "Optimization" "Closure compiler modules" "React.js" "Figwheel"]
+ :shopify  {:store    "thi-ng-store.myshopify.com"
+            :product  "High Performance Clojurescript - WebGL, GPU computing, asm.js, web workers (April 2016)"
+            :handle   "workshop-fast-clojurescript-webgl-gpu-computing-asm-js-web-workers-april-2016"
+            :cart     "11264390277:1"
+            :discount {:id "WS-LDN-8-EARLY" :num 3 :percent "15%"}}
+ :desc     [:div
+            "This is a repetition of the " [:a {:href "#WS-LDN-5"} "WS-LDN-5 workshop"] " described in detail above."
+            [:h3 "Requirements"]
+            [:ul
+             [:li "OSX / Linux / Windows7+ laptop with GPU (" [:a {:href "http://www.browserleaks.com/webgl"} "floating point texture support"] ")"]
+             [:li "Intermediate Clojurescript knowledge, not for complete beginners of the language"]]
+            [:p "Included in workshop fee:"]
+            [:ul
+             [:li "Food & hot drinks"]]
+            [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}

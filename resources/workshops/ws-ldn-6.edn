@@ -1,0 +1,41 @@
+{:title    "Building Clojure / Clojurescript desktop apps with OpenGL4, OpenCL & Electron"
+ :date     "7 - 8 April 2016"
+ :loc      "North London"
+ :audience "Intermediate Clojure/Clojurescript"
+ :capacity 8
+ :id       "WS-LDN-6"
+ :price    "£380.00 (+ 20% VAT in UK only)"
+ :topics   ["Clojure" "Java interop" "UI design & implementation" "OpenGL" "OpenCL" "Binary data" "Shared memory" "GLSL" "Native libraries" "GPGPU" "Data visualization" "Electron" "Image I/O" "Build process"]
+ :shopify  {:store    "thi-ng-store.myshopify.com"
+            :product  "Building Clojure / Clojurescript desktop apps with OpenGL4, OpenCL &amp; Electron (April 2016)"
+            :handle   "building-clojure-clojurescript-desktop-apps-with-opengl4-opencl-electron"
+            :cart     "11264258053:1"
+            :discount {:id "WS-LDN-6-EARLY" :num 3 :percent "15%"}}
+ :extras   [:div
+            [:p [:img {:src "/img/workshop/lcom-ws-ldn-6.jpg" :alt "Example screenshot" :width "100%"}]]
+            [:p "Screenshot of a client project realised with the same tools as used in the workshop. Written in Clojure, OpenGL & OpenCL."]]
+ :desc     [:div
+            "Whereas the previous workshop is focused on performance intensive applications primarily in the browser, this session is for those interested in using Clojure with modern, native high-performance frameworks to create standalone desktop applications, e.g. graphics intense, interactive data visualizations, machine learning, academic research tools, games, incl. learn how to build and manipulate these dynamically from the REPL. We will enter territory still unexplored by most professional Clojurians and get a glimpse, how with the help of OpenGL4 & OpenCL, we can truly make the most of Clojure and enable it for more use cases."
+            [:h3 "Scheduled topics"]
+            [:ul
+             [:li "Review of important 2d/3d geometry concepts (vector algebra, matrices, coordinate systems)"]
+             [:li "Working with native libraries in Clojure"]
+             [:li "OpenGL concepts (pipeline, buffers, textures, shaders)"]
+             [:li "Working with OpenGL4 (mesh generation, geometry loading, basic lighting, shader examples)"]
+             [:li "Comparison of OpenGL4 & WebGL features"]
+             [:li "Advanced Java interop, AOT compilation, shared Java sources, wrapping Java event listeners"]
+             [:li "Build GPU accelerated, declarative UI widgets with thi.ng/joglui (release forthcoming)"]
+             [:li "OpenCL toolchain install, concept overview (devices, contexts, pipelines, buffers, barriers) "]
+             [:li "Defining & interacting with OpenCL compute kernels from Clojure via " [:a {:href "http://thi.ng/simplecl"} "thi.ng/simplecl"]]
+             [:li "Displaying OpenCL computation results via OpenGL and Java graphics API"]
+             [:li "Generating & exporting assets to the file system / server"]
+             [:li "Exporting the project as standalone app (still requires Java on target machine) "]
+             [:li "Walkthrough of Clojurescript desktop example app built with " [:a {:href "http://electron.atom.io"} "Electron"]]]
+            [:h3 "Requirements"]
+            [:ul
+             [:li "OSX / Linux / Windows7+ laptop w/ OpenGL4 capable OS/GPU (e.g. min. OSX version 10.10)"]
+             [:li "Intermediate Clojure knowledge, not for complete beginners of the language"]]
+            [:p "Included in workshop fee:"]
+            [:ul
+             [:li "Food & hot drinks"]]
+            [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}
