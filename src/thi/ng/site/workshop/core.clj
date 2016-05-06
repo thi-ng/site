@@ -1,53 +1,26 @@
 (ns thi.ng.site.workshop.core
   (:require
    [clojure.string :as str]
-   [hiccup.core :refer [html]]))
+   [hiccup.core :refer [html]]
+   [clojure.java.io :as io]
+   [clojure.edn :as edn]))
 
 (def workshops
-  [
-   
-   
-   
-])
+  (->> []
+       (mapv #(edn/read-string (slurp (str "resources/workshops/" %))))))
 
 (def prev-workshops
-  [{:title    "thi.ng x Studio NAND - Clojure(script) data visualization workshop (3 days)"
-    :date     "17 - 19 February 2016"
-    :id       "WS-BLN-1"
-    :loc      "Berlin Mitte"
-    :audience "Intermediate Clojure knowledge"
-    ;;:url      "https://github.com/thi-ng/ws-bln-1/"
-    :topics   ["Clojure / Clojurescript concepts" "Live coding workflow" "Interactive SVG & WebGL visualization" "Reactive SPA (using Reagent)" "Shape generation/manipulation" "Shader composition" "Linked Data basics & queries"]}
-   {:title    "Interactive DIY Synth & embedded GUIs: Getting started with ARM programming (2 days)"
-    :date     "23 - 24 January 2016"
-    :loc      "North London"
-    :audience "Beginner/intermediate embedded device programming"
-    :id       "WS-LDN-4"
-    :url      "https://github.com/thi-ng/ws-ldn-4/"
-    :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Interactive touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]}
-   {:title    "DIY Synth - Getting started with bare-metal ARM programming"
-    :date     "5 - 6 December 2015"
-    :url      "https://github.com/thi-ng/ws-ldn-3/"
-    :id       "WS-LDN-3"
-    :loc      "North London"
-    :audience "Beginner/intermediate embedded device programming"
-    :topics   ["ARM Cortex-M overview" "Embedded C programming with Eclipse & GCC toolchain" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "USB device basics" "Digital Audio & DSP fundamentals" "MIDI over USB" "Music theory" "Generative music techniques"]
-    :report   {:url "https://soundcloud.com/forthcharlie/sets/stm32f4" :title "Audio examples (Soundcloud)"}}
-   {:title    "Data visualization with Clojure(script) & thi.ng (Level 2)"
-    :date     "11 - 13 November 2015"
-    :url      "https://github.com/thi-ng/ws-ldn-2/"
-    :id       "WS-LDN-2"
-    :loc      "London"
-    :audience "Intermediate Clojure knowledge"
-    :topics   ["Advanced Clojure / Clojurescript concepts" "Channel based concurrency (CSP / core.async)" "Graphs" "Linked Data basics & queries" "Async server setup & components" "Interactive SVG heatmaps" "Live coding" "SPA w/ Reactive UIs (using Reagent)" "Query visualization"]
-    :report   {:url "https://medium.com/@thi.ng/workshop-report-building-linked-data-heatmaps-with-clojurescript-thi-ng-102e0581225c" :title "Workshop report (blog post)"}}
-   {:title    "Data visualization with Clojure(script) & thi.ng (Level 1)"
-    :date     "2 - 4 November 2015"
-    :url      "https://github.com/thi-ng/ws-ldn-1/"
-    :id       "WS-LDN-1"
-    :loc      "London"
-    :audience "Beginner, intermediate Clojure knowledge"
-    :topics   ["Clojure / Clojurescript core concepts" "Workflow & toolchain options" "Collections & sequences" "Data transformations w/ transducers" "Protocols" "Data visualization techniques, mapping & charting" "CSV parsing & transformation" "2D/3D geometry generation & manipulation" "SVG generation / mapping" "React.js / Reagent examples" "WebGL basics"]}])
+  (->> ["ws-ldn-8.edn"
+        "ws-ldn-7.edn"
+        "ws-beo-1.edn"
+        "ws-ldn-6.edn"
+        "ws-ldn-5.edn"
+        "ws-bln-1.edn"
+        "ws-ldn-4.edn"
+        "ws-ldn-3.edn"
+        "ws-ldn-2.edn"
+        "ws-ldn-1.edn"]
+       (mapv #(edn/read-string (slurp (str "resources/workshops/" %))))))
 
 (defn shopify-button
   [bt]
@@ -223,6 +196,9 @@ Albert Museum's permanent collection."]]]
 
 (defn main
   []
-  (spit "resources/public/workshop-static.html" (html (main-panel))))
+  (let [tpl  (slurp "resources/public/workshop.html")
+        body (html (main-panel))
+        body (str/replace tpl "{{{app}}}" body)]
+    (spit "resources/public/workshop-static.html" body)))
 
 (main)

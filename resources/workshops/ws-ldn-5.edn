@@ -5,6 +5,7 @@
  :capacity 8
  :id       "WS-LDN-5"
  :price    "£575.00 (+ 20% VAT in UK only)"
+ :url      "https://github.com/thi-ng/ws-ldn-5/"
  :topics   ["Clojurescript" "WebGL" "GLSL shader composition" "asm.js" "2D/3D geometry" "Game development" "GPGPU" "core.async" "Web workers" "Multi-threading" "Websockets" "Optimization" "Closure compiler modules" "React.js" "Figwheel"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
             :product  "High Performance Clojurescript - WebGL, GPU computing, asm.js, web workers (March 2016)"

@@ -4,6 +4,7 @@
  :audience "Beginner/intermediate embedded device programming"
  :capacity 7
  :id       "WS-LDN-7"
+ :url      "https://github.com/thi-ng/ws-ldn-7/"
  :price    (list "£325.00 (+ 20% VAT in UK only)," [:br] "(includes STM32F746G discovery board, 2x cables)")
  :topics   ["ARM Cortex-M overview" "Embedded C with Eclipse & GCC" "Debugging" "Hardware Abstraction Layer" "GPIO" "Multitasking & interrupts" "Touchscreen GUIs" "Digital Audio & DSP fundamentals" "USB device basics" "MIDI over USB" "Generative music techniques"]
  :shopify  {:store    "thi-ng-store.myshopify.com"

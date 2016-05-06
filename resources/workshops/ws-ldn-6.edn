@@ -5,6 +5,7 @@
  :capacity 8
  :id       "WS-LDN-6"
  :price    "£380.00 (+ 20% VAT in UK only)"
+ :url      "https://github.com/thi-ng/ws-ldn-6/"
  :topics   ["Clojure" "Java interop" "UI design & implementation" "OpenGL" "OpenCL" "Binary data" "Shared memory" "GLSL" "Native libraries" "GPGPU" "Data visualization" "Electron" "Image I/O" "Build process"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
             :product  "Building Clojure / Clojurescript desktop apps with OpenGL4, OpenCL &amp; Electron (April 2016)"
