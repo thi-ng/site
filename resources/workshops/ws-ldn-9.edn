@@ -2,29 +2,51 @@
  :date     "6 - 8 June 2016"
  :loc      "North London"
  :audience "Beginner Clojure/Clojurescript"
- :capacity 8
+ :capacity 7
  :id       "WS-LDN-9"
  :price    "£575.00 (+ 20% VAT in UK only)"
  :url      "https://github.com/thi-ng/ws-ldn-9/"
- :topics   ["Clojurescript" ]
+ :topics   ["Clojure" "Clojurescript" "Data structures" "Collections" "Laziness" "Functional programming" "Sequence abstractions" "Transducers" "Polymorphism" "Protocols" "REST API" "UI development" "React.js" "Concurrency basics" "EDN" "SVG" "Visualization" "Interactive development workflow"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
             :product  "Fast Track to Clojure / Clojurescript (Beginner, June 2016)"
-            :handle   ""
-            :cart     ""
-            :discount {:id "WS-LDN-9-EARLY" :num 3 :percent "15%" :until "1 March 2016"}}
+            :handle   "fast-track-to-clojure-clojurescript-beginner-june-2016"
+            :cart     "17612660549:1"
+            :discount [{:id "WS-LDN-9-EARLY" :num 3 :percent "15% off" :until "22 May 2016"}
+                       {:id "WS-REPEAT" :percent "20% off for repeat students"}]}
  :extras   [:div
-            [:p [:img {:src "/img/workshop/commits-ws-ldn-9.jpg" :alt "Example screenshot" :width "100%"}]]
-            [:p "Caption"]]
+            [:p [:img {:src "/img/workshop/ws-ldn-9-airports.jpg" :alt "Example screenshot" :width "100%"}]]
+            [:p "Workshop example: Mapping 40000+ airports"]]
  :desc     [:div
-            "As Clojurescript is finding more inroads into interactive, online & mobile apps, experiences and games with high demands on runtime performance, this workshop is tailored to give you the insights and techniques required to tickle out maximum performance for your demanding CLJS projects where it matters. Although not exclusively aimed at games developers, we will be mainly using (and building) a simple 3D game as learning context to learn about:"
+            "Clojure & ClojureScript from 0 to 100 - This workshop will provide you with a strong foundation in both languages in a variety of typical usage contexts: from basic data processing examples, exploring functional programming concepts, data analysis, data modeling, to simple web application development (both in the browser and server-side) and small interactive and visual experiments, all utilizing and demonstrating the power and flexibility of Clojure's language features and interactive workflows. Participants should have general programming knowledge, but " [:strong "no prior Clojure knowledge is required."]
             [:h3 "Scheduled topics"]
             [:ul
-             ]
+             [:li "Introduction to Clojure and the LISP family of languages"]
+             [:li "Working with the Clojure REPL as main development tool and idea scratchpad"]
+             [:li "Clojure data types, collections, immutable vs. mutable data"]
+             [:li "Functional programming concepts, role of pure functions, higher-order functions, data as functions"]
+             [:li "Unified data processing using Clojure's sequence abstraction API"]
+             [:li "Laziness in Clojure, how to make the most of it, when to avoid it"]
+             [:li "Composing simple processing pipelines with transducers"]
+             [:li "Creating custom data types"]
+             [:li "Polymorphism, protocols, multi-methods"]
+             [:li "Brief overview of macros & usage"]
+             [:li "Building & testing a simple REST API server"]
+             [:li "Introduction to Clojurescript, differences to Clojure"]
+             [:li "Code re-use, sharing code between Clojure & Clojurescript"]
+             [:li "Finding & working with open source libraries"]
+             [:li "Interactive frontend development, datadriven UI building with Clojurescript & React.js"]
+             [:li "Introduction to hiccup & Reagent libraries to encode HTML as Clojure data"]
+             [:li "Event handling & abstraction opportunities in Clojure / ClojureScript"]
+             [:li "Exchanging data between Clojurescript & Clojure (EDN, JSON, Transit, XML, binary)"]
+             [:li "Clojure concurrency & parallelism basics / examples (futures, promises, delays, atoms, agents, refs)"]
+             [:li "Introduction to thi.ng libraries"]
+             [:li "Interactive visualization examples (SVG, canvas)"]
+             [:li "Deployment options for Clojure/ClojureScript apps"]]
             [:h3 "Requirements"]
             [:ul
              [:li "OSX / Linux / Windows7+ laptop"]
              [:li "Java JDK v1.8+"]]
             [:p "Included in workshop fee:"]
             [:ul
-             [:li "Food & hot drinks"]]
+             [:li "Food, hot & cold drinks"]]
             [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}

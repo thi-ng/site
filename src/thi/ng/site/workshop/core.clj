@@ -28,16 +28,18 @@
   [bt]
   [:div
    [:div
-    {:data-embed_type              :product
-     :data-shop                    (:store bt)
-     :data-product_name            (:product bt)
-     :data-product_handle          (:handle bt)
-     :data-has_image               false
-     :data-display_size            :compact
-     :data-redirect_to             :checkout
-     :data-buy_button_text         "Book now"
-     :data-button_background_color "ff0099"
-     :data-button_text_color       "ffffff"}]
+    {:data-embed_type                          :product
+     :data-shop                                (:store bt)
+     :data-product_name                        (:product bt)
+     :data-product_handle                      (:handle bt)
+     :data-has_image                           :false
+     :data-display_size                        :compact
+     :data-redirect_to                         :checkout
+     :data-buy_button_text                     "Book now"
+     :data-buy_button_out_of_stock_text        "Out of Stock"
+     :data-buy_button_product_unavailable_text "Unavailable"
+     :data-button_background_color             "ff0099"
+     :data-button_text_color                   "ffffff"}]
    [:noscript
     [:a.bt {:href (str "https://store-thi-ng.myshopify.com/cart/" (:cart bt))
             :target "_blank"} "Book now"]]])
@@ -61,11 +63,14 @@
           (list
            (when-not (:soldout ws)
              (when-let [disc (-> ws :shopify :discount)]
-               [:tr
-                [:th "Discount:"]
-                [:td.discount
-                 (:percent disc) " off" (if-let [n (:num disc)] (str " for first " n " participants"))
-                 [:br] "Checkout code: " [:strong (:id disc)]]]))
+               (map-indexed
+                (fn [i disc]
+                  [:tr
+                   [:th (if (zero? i) "Discount:")]
+                   [:td.discount
+                    (:percent disc) (if-let [n (:num disc)] (str " for first " n " participants"))
+                    [:br] "Checkout code: " [:strong (:id disc)]]])
+                (if (sequential? disc) disc [disc]))))
            [:tr [:th] [:td (if (:soldout ws) [:strong "SOLD OUT"] (shopify-button (:shopify ws)))]]))]]
       (:extras ws)]
      [:div.col2 (:desc ws)]]
@@ -164,7 +169,7 @@ Albert Museum's permanent collection."]]]
     [:h2 "Venue details"]
     "Participants will be notified of the venue address and travel options at least 1 week prior to each workshop."
     [:h2 "Daily schedule & sustenance"]
-    [:p "All workshops run from 10am - 5.30pm, incl. 1h lunch break and short coffee breaks (5 mins) every 2 hours (based on group decisions on the day)."]
+    [:p "All workshops run from 10am - 5.45pm, incl. 1h lunch break and short coffee breaks (5 mins) every 2 hours (based on group decisions on the day)."]
     [:p "If food & drinks are included in workshop fee (as per workshop description), you'll need to inform us of any special dietary requirements at least 48h before the workshop start."]
     [:h2 "Materials"]
     [:p "All participants are required to bring their own laptop (OSX, Linux or Windows 7+). UK power points will be supplied."]

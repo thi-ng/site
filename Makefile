@@ -70,10 +70,10 @@ serve-main:
 
 ############# Workshop
 
-$(WS)/index.html: $(RES)/workshop.html
+$(WS)/index.html: $(RES)/workshop-static.html
 	@echo "compressing html..."
 	@mkdir -p $(WS)
-	@htmlcompressor $(HTML_OPTS) -o $(WS)/index.html $(RES)/workshop.html
+	@htmlcompressor $(HTML_OPTS) -o $(WS)/index.html $(RES)/workshop-static.html
 	@cat $(WS)/index.html | sed -e "s/app.js/app.js?`date +%s`/" | sed -e "s/workshop.css/workshop.css?`date +%s`/" > $(WS)/index.html
 
 $(WS)/css/workshop.css: $(RES)/css/workshop.css
@@ -92,17 +92,17 @@ $(WS)/img: $(RES)/img/workshop $(RES)/favicon.ico
 	@rm -rf $(WS)/img/projects $(WS)/img/all-commits.svg
 	@cp $(RES)/favicon.ico $(WS)/
 
-$(WS)/js/workshop/app.js: $(WS_SRC)
-	@echo "compiling js..."
-	@lein with-profile prod do clean, cljsbuild once min-workshop
-	@mkdir -p $(WS)/js/workshop
-	@cp $(RES)/js/workshop/app.js $(WS)/js/workshop/
+# $(WS)/js/workshop/app.js: $(WS_SRC)
+#	@echo "compiling js..."
+#	@lein with-profile prod do clean, cljsbuild once min-workshop
+#	@mkdir -p $(WS)/js/workshop
+#	@cp $(RES)/js/workshop/app.js $(WS)/js/workshop/
 
 $(WS)/robots.txt: $(RES)/robots.txt
 	@mkdir -p $(WS)
 	@cp $(RES)/robots.txt $(WS)/
 
-ws: ws-html ws-js ws-css ws-fonts ws-img $(WS)/robots.txt
+ws: ws-html ws-css ws-fonts ws-img $(WS)/robots.txt
 
 install-ws: ws
 	@echo "syncing with: $(WS_TARGET)"

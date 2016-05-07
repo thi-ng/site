@@ -25,7 +25,7 @@ h1 {
     font-style: italic;
     font-size: 350%;
     letter-spacing: -1.5px;
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 h2 {
@@ -112,7 +112,7 @@ footer a:link, footer a:hover, footer a:visited {
 }
 
 #gallery {
-    margin: 0px -20px;
+    margin: 0 -20px -4px -20px;
     overflow-x: hidden;
     width: 100vw;
 }
@@ -138,18 +138,31 @@ footer a:link, footer a:hover, footer a:visited {
     font-style: italic;
 }
 
-#testimonials {
+#testimonials, #discounts {
     margin: 0 -20px;
-    background-color: #ffa;
-    padding: 40px 20px;
+    padding: 2em 20px 0 20px;
     line-height: 1.2;
-    font-size: 150%;
-    font-style: italic;
     min-height: 5.5em;
 }
+#testimonials {
+    background-color: #ffa;
+}
 
-#testimonials h2 {
-    margin: 0 auto;
+#testimonials h2, #discounts h2 {
+    font-size: 250%;
+    font-style: italic;
+    margin-bottom: 0.25em;
+}
+
+#discounts {
+    margin-top: -14px;
+    background-color: #4af;
+    color: white;
+    text-align: center;
+}
+
+#discounts .col2 {
+    margin-bottom: 1em;
 }
 
 .hidden {
@@ -218,6 +231,10 @@ section {
 
 .col2 h2 {
     margin-top: 0;
+}
+
+.col3 {
+    margin-bottom: 1em;
 }
 
 dt {
@@ -425,6 +442,9 @@ span.tag:hover {
         font-size: 125%;
         line-height: 1;
     }
+    #testimonials h2 {
+        font-size: 150%;
+    }
     h1 {
         font-size: 350%;
     }
@@ -443,9 +463,6 @@ span.tag:hover {
 }
 
 @media (max-width: 480px) {
-    /* #heatmap {
-        display: none;
-    } */
     h1 {
         font-size: 250%;
     }
@@ -480,6 +497,12 @@ span.tag:hover {
         width: 45%;
         float: left;
         margin-right: 5%;
+    }
+
+    .col3 {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
     }
 }
 
@@ -694,6 +717,9 @@ span.tag:hover {
 }
 .fa-caret-up:before {
     content: "\f0d8";
+}
+.fa-caret-down:before {
+    content: "\f0d7";
 }
 .fa-envelope:before {
     content: "\f0e0";

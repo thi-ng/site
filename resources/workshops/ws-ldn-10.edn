@@ -1,30 +1,48 @@
-{:title    "Generative design with Clojure & ClojureScript"
- :date     "22 - 24 June 2016"
+{:title    "Generative & evolutionary design systems with Clojure & ClojureScript"
+ :date     "23 - 24 June 2016"
  :loc      "North London"
  :audience "Intermediate Clojure/ClojureScript"
- :capacity 8
+ :capacity 7
  :id       "WS-LDN-10"
- :price    "£575.00 (+ 20% VAT in UK only)"
+ :price    "£380.00 (+ 20% VAT in UK only)"
  :url      "https://github.com/thi-ng/ws-ldn-10/"
- :topics   ["Clojure" "Clojurescript" "OpenGL" "Geometry" "Physics simulation" "3D meshing" "Agent systems"]
+ :topics   ["Clojure" "Clojurescript" "Generative techniques" "Twitter bots" "Simulation" "Physics" "Agent systems" "Evolutionary computing" "Genetic programming" "Digital fabrication" "Geometry" "OpenGL / WebGL" "Domain-specific languages" "Interpreters" "Macros" "Visualization" "Importing / exporting assets" "Rendering"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
-            :product  ""
-            :handle   ""
-            :cart     ""
-            :discount {:id "WS-LDN-10-EARLY" :num 3 :percent "15%" :until "1 June 2016"}}
+            :product  "Generative design systems with Clojure &amp; ClojureScript"
+            :handle   "generative-design-systems-with-clojure-clojurescript"
+            :cart     "17612670213:1"
+            :discount [{:id "WS-LDN-10-EARLY" :num 3 :percent "15%" :until "22 May 2016"}
+                       {:id "WS-REPEAT" :percent "20% off for repeat students"}]}
  :extras   [:div
-            [:p [:img {:src "/img/workshop/commits-ws-ldn-10.jpg" :alt "Example screenshot" :width "100%"}]]
-            [:p ""]]
+            [:p [:img {:src "/img/workshop/ws-ldn-10-morphogen.jpg" :alt "Example screenshot" :width "100%"}]]
+            [:p "Example object generated with thi.ng/morphogen DSL"]]
  :desc     [:div
-            "As Clojurescript is finding more inroads into interactive, online & mobile apps, experiences and games with high demands on runtime performance, this workshop is tailored to give you the insights and techniques required to tickle out maximum performance for your demanding CLJS projects where it matters. Although not exclusively aimed at games developers, we will be mainly using (and building) a simple 3D game as learning context to learn about:"
+            "Bots, simulations, unique, parametric design creation for digital fabrication / printing / architecture, branding, genetic programming, pattern creation, designs for games / interactive experiences, dynamic non-linear narratives, music/sound design... Clojure's / ClojureScript's language features & syntax offer unqiue, and so far largely underutilized, opportunities in the field of procedural and generative content creation. This session is aimed at users interested in the design and development of Clojure/ClojureScript based applications and services which are enabled by or can benefit from generative processes (not just artistic ones!). We will cover theory & praxis of useful techniques - rule & grammar based systems, agent modelling, physics, genetic Programming, cell-based simulations, domain-specific languages etc. - explore them in different media (text, 2D/3D visuals/geometries) and learn how to implement them efficiently in a Clojure-specific way to allow for more a fruitful exploration of these approaches in further research and/or production/fabrication. Source code examples & scaffolding will be provided."
             [:h3 "Scheduled topics"]
             [:ul
-             [:li "Generative techniques"]]
+             [:li "Generative design processes, overview, aesthetics & project examples of various common techniques in different media"]
+             [:li "Introduction to related thi.ng libraries used in the workshop"]
+             [:li "Overview of important 2D/3D geometry concepts, how to use in Clojure"]
+             [:li "Bottom up design: Forming structures from simple components & operations"]
+             [:li "Layering complexity, creating interactions & feedback between generative processes"]
+             [:li "Growing structures, iterative & recursive processes"]
+             [:li "Choosing & simulating natural processes, re-purposing algorithms for different media types"]
+             [:li "Visualization/output options under Clojure & Clojurescript (OpenGL, WebGL, Canvas, SVG, rendering)"]
+             [:li "Overview & examples of basic OpenGL/WebGL concepts to visualize 2D/3D geometries"]
+             [:li "Importing & exporting assets (for realtime 2D/3D, bitmaps, post-processing, rendering, fabrication etc.)"]
+             [:li "Visual generative system examples (agents, physics, voxels etc.)"]
+             [:li "Creating an interactive Twitter bot to publish generative art"]
+             [:li "Overview of thi.ng/luxor & Luxrender, creating high quality renders, network rendering setup"]
+             [:li "Introduction to Genetic Programming (GP) & Evolutionary design"]
+             [:li "Implementing a GP system, phenotype, genotype, fitness evaluation"]
+             [:li "Domain-specific languages (DSL) in Clojure: introduction & implementation"]
+             [:li "Writing a simple DSL interpreter"]
+             [:li "Introduction to macros: Why, How, When & When not to use them, compile time vs runtime"]]
             [:h3 "Requirements"]
             [:ul
              [:li "OSX / Linux / Windows7+ laptop with GPU (for OpenGL / WebGL)"]
              [:li "Intermediate Clojurescript knowledge, not for complete beginners of the language"]]
             [:p "Included in workshop fee:"]
             [:ul
-             [:li "Food & hot drinks"]]
+             [:li "Food, hot & cold drinks"]]
             [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}
