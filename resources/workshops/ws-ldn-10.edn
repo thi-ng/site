@@ -5,6 +5,7 @@
  :capacity 7
  :id       "WS-LDN-10"
  :price    "£380.00 (+ 20% VAT in UK only)"
+ :soldout  true
  :url      "https://github.com/thi-ng/ws-ldn-10/"
  :topics   ["Clojure" "Clojurescript" "Generative techniques" "Twitter bots" "Simulation" "Physics" "Agent systems" "Evolutionary computing" "Genetic programming" "Digital fabrication" "Geometry" "OpenGL / WebGL" "Domain-specific languages" "Interpreters" "Macros" "Visualization" "Importing / exporting assets" "Rendering"]
  :shopify  {:store    "thi-ng-store.myshopify.com"

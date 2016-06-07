@@ -5,6 +5,7 @@
  :capacity 7
  :id       "WS-LDN-9"
  :price    "£575.00 (+ 20% VAT in UK only)"
+ :soldout  true
  :url      "https://github.com/thi-ng/ws-ldn-9/"
  :topics   ["Clojure" "Clojurescript" "Data structures" "Collections" "Laziness" "Functional programming" "Sequence abstractions" "Transducers" "Polymorphism" "Protocols" "REST API" "UI development" "React.js" "Concurrency basics" "EDN" "SVG" "Visualization" "Interactive development workflow"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
