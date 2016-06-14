@@ -121,7 +121,7 @@ footer a:link, footer a:hover, footer a:visited {
 }
 
 #gallery div {
-    width: 6000px;
+    width: 6400px;
 }
 
 #gallery img {
@@ -407,12 +407,12 @@ span.tag:hover {
 
 @-webkit-keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-3000px); }
+    100% { transform: translateX(-3200px); }
 }
 
 @keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-3000px); }
+    100% { transform: translateX(-3200px); }
 }
 
 .scroll {

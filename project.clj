@@ -14,8 +14,8 @@
                   [reagent "0.5.1"]
                   [hiccup "1.0.5"]]
 
-  :plugins       [[lein-cljsbuild "1.1.0"]
-                  [lein-figwheel "0.4.0"]
+  :plugins       [[lein-cljsbuild "1.1.3"]
+                  [lein-figwheel "0.5.4-2"]
                   [lein-environ "1.0.0"]]
 
   :source-paths  ["src"]
