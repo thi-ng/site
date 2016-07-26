@@ -7,6 +7,7 @@
  :price    "£380.00 (+ 20% VAT in UK only)"
  :soldout  true
  :url      "https://github.com/thi-ng/ws-ldn-10/"
+ :report   {:url "https://medium.com/@thi.ng/workshop-report-generative-design-with-clojure-7d6d8ea9a6e8" :title "Workshop report (blog post)"}
  :topics   ["Clojure" "Clojurescript" "Generative techniques" "Twitter bots" "Simulation" "Physics" "Agent systems" "Evolutionary computing" "Genetic programming" "Digital fabrication" "Geometry" "OpenGL / WebGL" "Domain-specific languages" "Interpreters" "Macros" "Visualization" "Importing / exporting assets" "Rendering"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
             :product  "Generative design systems with Clojure &amp; ClojureScript"

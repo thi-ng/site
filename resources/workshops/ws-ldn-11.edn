@@ -5,7 +5,8 @@
  :capacity 7
  :id       "WS-LDN-11"
  :price    "£575.00 (+ 20% VAT in UK only)"
- :url      "https://github.com/thi-ng/ws-ldn-5/"
+ :url      "https://github.com/thi-ng/ws-ldn-11/"
+ :report   {:url "https://medium.com/@thi.ng/clojurescript-webworkers-webgl-6c2f3c717d9e" :title "Workshop report (blog post)"}
  :topics   ["ClojureScript" "Optimization techniques" "WebGL" "GLSL" "asm.js" "Emscripten" "WebRTC video" "2D/3D geometry" "Game development" "GPGPU" "C" "Web workers" "Websockets" "Closure compiler modules" "React.js" "Figwheel"]
  :shopify  {:store    "thi-ng-store.myshopify.com"
             :product  "High Performance Clojurescript - WebGL, WebWorkers, asm.js (June 2016)"

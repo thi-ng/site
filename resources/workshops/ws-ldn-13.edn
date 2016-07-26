@@ -1,0 +1,46 @@
+{:title    "Clojure & thi.ng for 3D Printing / Digital Fabrication"
+ :date     "10 - 11 September 2016"
+ :loc      "North London"
+ :audience "Novice/intermediate"
+ :capacity 7
+ :id       "WS-LDN-13"
+ :url      "https://github.com/thi-ng/ws-ldn-13/"
+ :price    [:div [:strong "£325.00 (+ 20% VAT in UK only)"] "," [:br] "(includes free 3D printed model)"]
+ :topics   ["3D printing" "Algorithmic & generative design" "2D/3D shape creation" "2D/3D conversion" "Extrusions" "Voxels" "Geometry smoothing" "Designing w/ material constraints" "Automatic layouts / Bin-packing" "Post-processing w/ Blender" "Fabrication methods" ]
+ :shopify  {:store    "thi-ng-store.myshopify.com"
+            :product  "Clojure & thi.ng Digital Fabrication"
+            :handle   "clojure-thi-ng-digital-fabrication"
+            :cart     "19281224133:1"
+            :discount {:id "WS-LDN-13-EARLY" :num 3 :percent "15%"}}
+ :extras   [:div
+            [:p [:img {:src "/img/workshop/ws-ldn-13-cf.jpg" :alt "Google DevArt Co(de)Factory" :width "100%"}]]
+            [:p "Google DevArt Co(de)Factory, 3.5m tall 3D printed structure designed w/ Clojure & " [:a {:href "http://thi.ng/geom"} "thi.ng/geom"]]]
+ :desc     [:div
+            "3D printing technology is becoming ever more affordable and there's no shortage of design tools. However, this workshop is for anyone interested in using an algorithmic approach to fabricate physical objects and do so using a language & toolset, which makes playing with data and geometry truly joyful. Over the two days of this workshop, you'll will learn hands-on some of the endless potential, which procedural generation can bring to the field of digital fabrication. And, you'll not only be able to take home your own 3D printed object, but too learn about important skills and pitfalls to watch out for in your future practice with these technologies." 
+            [:p "Commented source code scaffolding will be provided to maximize time for experimentation."]
+            [:h3 "Scheduled topics"]
+            [:ul
+             [:li "Brief Clojure overview / introduction"]
+             [:li "Overview of relevant thi.ng libraries used for this workshop"]
+             [:li "2D/3D geometry basics, defining & manipulating shapes programmatically"]
+             [:li "From points to lines, curves, polygons, surfaces"]
+             [:li "Creating complex shapes via polygon operations (clipping, offsetting, intersecting)"]
+             [:li "Applying geometry filters (smoothing etc.)"]
+             [:li "Designing for fabrication (tolerances, material properties, wall thickness, stability, angles)"]
+             [:li "Taking 2D designs into the 3rd dimension (lathe, extrusion, heightmap etc.)"]
+             [:li "Exporting assets in various fabrication formats (for 2D laser cutting & 3D printing)"]
+             [:li "Auto-arranging multiple export assets in a space/material saving manner (bin-packing)"]
+             [:li "Easy creation of complex 3D geometries via volumetric modelling & boolean operations"]
+             [:li "Cleaning geometries in Meshlab, Blender & Inkscape"]
+             [:li "Open source & commercial 3D print solutions"]
+             [:li "3D printing of workshop examples"]]
+            [:h3 "Requirements"]
+            [:p "Programming knowledge required, but only basic Clojure skills assumed. Users should also feel comfortable with using the command line."]
+            [:p "All participants need to bring the following items:"]
+            [:ul
+             [:li "OSX / Linux / Windows7+ laptop"]]
+            [:p "Included in workshop fee:"]
+            [:ul
+             [:li "3D print of your workshop project"]
+             [:li "Food & hot drinks"]]
+            [:p "Please also see " [:a {:href "#tandc"} "Terms & Conditions"] " below."]]}

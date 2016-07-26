@@ -6,13 +6,15 @@
    [clojure.edn :as edn]))
 
 (def workshops
-  (->> ["ws-ldn-9.edn"
-        "ws-ldn-10.edn"
-        "ws-ldn-11.edn"]
+  (->> ["ws-ldn-12.edn"
+        "ws-ldn-13.edn"]
        (mapv #(edn/read-string (slurp (str "resources/workshops/" %))))))
 
 (def prev-workshops
-  (->> ["ws-ldn-8.edn"
+  (->> ["ws-ldn-11.edn"
+        "ws-ldn-10.edn"
+        "ws-ldn-9.edn"
+        "ws-ldn-8.edn"
         "ws-ldn-7.edn"
         "ws-beo-1.edn"
         "ws-ldn-6.edn"
@@ -58,7 +60,9 @@
         [:tr [:th "Audience:"] [:td (:audience ws)]]
         [:tr [:th "Capacity:"] [:td (:capacity ws) " participants"]]
         [:tr [:th "\u00a0"] [:td]]
-        [:tr [:th "Price:"] [:td (if-let [p (:price ws)] [:strong (:price ws)] "TBC")]]
+        [:tr [:th "Price:"] [:td (if-let [p (:price ws)]
+                                   (if (string? p) [:strong (:price ws)] p)
+                                   "TBC")]]
         (when (or (:soldout ws) (:shopify ws))
           (list
            (when-not (:soldout ws)
